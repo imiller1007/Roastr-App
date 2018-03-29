@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS `roastr_db`;
+CREATE DATABASE `roastr_db`;
