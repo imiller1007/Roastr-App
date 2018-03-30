@@ -1,4 +1,18 @@
 
+
+
 #login {
 	border-right: 1px solid black;
+}
+
+.glyphicon-fire {
+	color: rgb(227, 108, 66);
+}
+
+.leftRoast {
+	border-right: 1px solid;
+}
+
+.glyphicon {
+	color: rgb(227, 108, 66);
 }
