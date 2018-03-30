@@ -1,26 +1,26 @@
 /*
-
     DEMO STYLE
-
 */
 
 body {
-	background: white;
+	background: #f44d2f;
+	color: #2D3C59;
 }
 p {
 	font-size: 1.1em;
 	font-weight: 300;
 	line-height: 1.7em;
-	color: rgb(227, 108, 66);
+	color: #191b1e;
+	
 }
 a, a:hover, a:focus {
 	color: inherit;
 	text-decoration: none;
 	transition: all 0.3s;
-	color: rgb(227, 108, 66);
+	color: #f44d2f;
 }
 .navbar {
-	background: #fff;
+	background: transparent;
 	border: none;
 	border-radius: 0;
 	
@@ -29,8 +29,17 @@ a, a:hover, a:focus {
 	box-shadow: none;
 	outline: none !important;
 	border: none;
-	background: black;
+	background: #2D3C59;
 }
+
+.navbar-btn:hover{
+	background: white;
+	color: #f44d2f;
+	transition: all 0.3s;
+	box-shadow: 0px 0px 25px white;
+
+}
+
 .line {
 	width: 100%;
 	height: 1px;
@@ -38,9 +47,7 @@ a, a:hover, a:focus {
 	margin: 20px 0;
 }
 /* ---------------------------------------------------
-
     SIDEBAR STYLE
-
 ----------------------------------------------------- */
 
 #sidebar {
@@ -50,11 +57,12 @@ a, a:hover, a:focus {
 	left: -250px;
 	height: 100vh;
 	z-index: 999;
-	background: #FED026;
-	color: black;
+	background: #191b1e;
+	color: #1b001c;
 	transition: all 0.3s;
 	overflow-y: scroll;
 	box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.2);
+	border-right: 2px solid #f44d2f;
 }
 #sidebar.active {
 	left: 0;
@@ -64,7 +72,7 @@ a, a:hover, a:focus {
 	height: 35px;
 	line-height: 35px;
 	text-align: center;
-	background: black;
+	background: #f44d2f;
 	position: absolute;
 	top: 10px;
 	right: 10px;
@@ -76,7 +84,8 @@ a, a:hover, a:focus {
 }
 #dismiss:hover {
 	background: #fff;
-	color: #7386D5;
+	color: #f44d2f;
+	box-shadow: 0px 0px 25px white;
 }
 .overlay {
 	position: fixed;
@@ -87,7 +96,7 @@ a, a:hover, a:focus {
 	display: none;
 }
 #sidebar .sidebar-header {
-	background: #FED026;
+	background: transparent;
 }
 #sidebar ul.components {
 	padding: 20px 0;
@@ -107,7 +116,7 @@ a, a:hover, a:focus {
 	background: #fff;
 }
 #sidebar ul li.active > a, a[aria-expanded="true"] {
-	background: #FED026;
+	background: transparent;
 }
 a[data-toggle="collapse"] {
 	position: relative;
@@ -126,7 +135,7 @@ a[aria-expanded="true"]::before {
 ul ul a {
 	font-size: 0.9em !important;
 	padding-left: 30px !important;
-	background: white;
+	background: transparent;
 }
 ul.CTAs {
 	padding: 20px;
@@ -144,9 +153,7 @@ a.article, a.article:hover {
 	color: #fff !important;
 }
 /* ---------------------------------------------------
-
     CONTENT STYLE
-
 ----------------------------------------------------- */
 
 #content {
@@ -157,4 +164,19 @@ a.article, a.article:hover {
 	position: absolute;
 	top: 0;
 	right: 0;
+}
+.nav {
+	float: right;
+}
+
+.leftRoast {
+	border-right: 1px solid;
+	padding: 10px;
+}
+
+.rightRoast {
+	padding: 10px;
+}
+#profile-img {
+	margin: 40px 0 0 0;
 }
