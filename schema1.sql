@@ -5,7 +5,7 @@ USE roaster;
 
 -- Created the table "post table" 
 
-CREATE TABLE products (
+CREATE TABLE posts (
   postid INT NOT NULL,
   userid VARCHAR(45) NULL,
   post VARCHAR( 100 ) NOT NULL,
