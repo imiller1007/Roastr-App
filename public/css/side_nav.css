@@ -3,20 +3,24 @@
 */
 
 body {
-	background: #f44d2f;
-	color: #2D3C59;
+	background:#f44d2f;
+	background-repeat: no-repeat;
+	height: 2000px;
+	color: #191b1e;
+	padding-top: 30px;
 }
 p {
 	font-size: 1.1em;
 	font-weight: 300;
 	line-height: 1.7em;
 	color: #191b1e;
+	margin: 0;
 	
 }
 a, a:hover, a:focus {
 	color: inherit;
 	text-decoration: none;
-	transition: all 0.3s;
+	transition: all eas0.3s;
 	color: #f44d2f;
 }
 .navbar {
@@ -29,7 +33,7 @@ a, a:hover, a:focus {
 	box-shadow: none;
 	outline: none !important;
 	border: none;
-	background: #2D3C59;
+	background: #2d3035;
 }
 
 .navbar-btn:hover{
@@ -40,11 +44,14 @@ a, a:hover, a:focus {
 
 }
 
+.navbar-btn:after{
+	transition: all 0.3s;
+}
+
 .line {
 	width: 100%;
 	height: 1px;
 	border-bottom: 1px dashed #ddd;
-	margin: 20px 0;
 }
 /* ---------------------------------------------------
     SIDEBAR STYLE
@@ -89,6 +96,7 @@ a, a:hover, a:focus {
 }
 .overlay {
 	position: fixed;
+	top: 0;
 	width: 100vw;
 	height: 100vh;
 	background: rgba(0, 0, 0, 0.7);
@@ -158,7 +166,6 @@ a.article, a.article:hover {
 
 #content {
 	width: 100%;
-	padding: 20px;
 	min-height: 100vh;
 	transition: all 0.3s;
 	position: absolute;
@@ -169,14 +176,25 @@ a.article, a.article:hover {
 	float: right;
 }
 
-.leftRoast {
-	border-right: 1px solid;
-	padding: 10px;
-}
 
-.rightRoast {
-	padding: 10px;
-}
+
+
 #profile-img {
 	margin: 40px 0 0 0;
+}
+
+
+
+.title {
+	height: 30px;
+	vertical-align: middle;
+	background: #2d3035;
+	color: white;
+	padding: 5px;
+}
+
+.roast {
+	border-radius: 10px;
+	overflow: hidden;
+	border: 2px solid rgba(255, 255, 255, .5);
 }
