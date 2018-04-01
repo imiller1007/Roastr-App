@@ -23,12 +23,13 @@ a, a:hover, a:focus {
 
 h1 {
 	font-size: 48px;
-	color:gold;
-	text-shadow: 0px 0px 25px orange;
 }
 
 .h1, .h2, .h3, h1, h2, h3 {
     margin: 0;
+	color:gold;
+	text-shadow: 0px 0px 25px orange;
+	margin-bottom: 15px;
 }
 
 body {
