@@ -9,20 +9,18 @@
 <!-- Bootstrap CSS CDN -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <!-- Our Custom CSS -->
-
 <!-- Scrollbar Custom CSS -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 <link href="css/side_nav.css" rel="stylesheet" type="text/css">
-<link href="css/style.css" rel="stylesheet" type="text/css">
-</head>
 
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/particles.css" rel="stylesheet" type="text/css">
+</head>
 <body>
 <div class="wrapper">
 <!-- Sidebar Holder -->
 <nav id="sidebar">
   <div id="dismiss"><i class="glyphicon glyphicon-fire"></i> </div>
-  
-  
   <!--profile img-->
   <div class="row" id="profile-img">
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-2"></div>
@@ -41,52 +39,45 @@
       <p>This app was created by Asad, Ian, Anthony and Chuck.</p>
     </li>
   </ul>
-	<div class="sidebar-header">
+  <div class="sidebar-header">
     <h1 class="text-center">Roastr</h1>
   </div>
 </nav>
-
 <!-- Page Content Holder -->
 <div id="content">
-  <div class="container">
-    <nav class="navbar navbar-default">
-      <div class="navbar-header">
-        <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn"> <i class="glyphicon glyphicon-menu-hamburger"></i></button>
-		  
-      </div>
-		<div class="text-center"><h1>Roastr Logo</h1></div>
-    </nav>
-	  </div>
-  <!--Start feed-->
-  <div class="container">
-    <div class="battle-title row">
-      <h3 class="text-center"><span class="roast1">Player 1</span> VS <span>Player 2</span></h3>
-      <div class="row">
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 leftRoast">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-        <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 rightRoast">
-          <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-        </div>
-		<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12"><div class="switch-toggle switch-3 switch-candy switch-candy-yellow">
-    <input id="on" name="state-d" type="radio" checked="">
-    <label for="on" onclick=""><i class="glyphicon glyphicon-fire"></i></label>
-
-    <input id="na" name="state-d" type="radio" disabled checked="checked">
-			<label for="na" onclick=""></i><span class="glyphicon glyphicon-menu-left"></span>Roast<span class="glyphicon glyphicon-menu-right"></span></label>
-
-    <input id="off" name="state-d" type="radio">
-    <label for="off" onclick=""><i class="glyphicon glyphicon-fire"></i></label>
-
-    <a></a>
-</div></div>
-        <div class="line col-xs-12 col-sm-12 col-md-12 col-lg-12"></div>
-      </div>
+<div class="container">
+  <nav class="navbar navbar-default">
+    <div class="navbar-header">
+      <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn"> <i class="glyphicon glyphicon-menu-hamburger"></i></button>
+    </div>
+    <div class="text-center">
+      <h1>Roastr Logo</h1>
+    </div>
+  </nav>
+</div>
+<!--Start feed-->
+<div class="container">
+  <div class="roast col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="title col-xs-12 col-sm-12 col-md-12 col-lg-12 ">
+      <div class="title text-center"> <span class="roastr1">Player 1</span> <strong>VS</strong> <span class="roastr2">Player 2</span> </div>
+    </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 leftRoast">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. </div>
+    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6 rightRoast">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer nec odio. Praesent libero. Sed cursus ante dapibus diam. Sed nisi. Nulla quis sem at nibh elementum imperdiet. Duis sagittis ipsum. Praesent mauris. Fusce nec tellus sed augue semper porta. Mauris massa. </div>
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <div class="switch-toggle switch-3 switch-candy switch-candy-yellow">
+        <input id="on" name="state-d" type="radio" checked="">
+        <label for="on"><em class="glyphicon glyphicon-fire"></em> 3</label>
+        <input id="na" name="state-d" type="radio" disabled checked="checked">
+        <label for="na" onclick=""></i><span class="glyphicon glyphicon-menu-left"></span>Roast<span class="glyphicon glyphicon-menu-right"></span></label>
+        <input id="off" name="state-d" type="radio">
+        <label for="off" onclick="">3 <i for="on" onclick=""class="glyphicon glyphicon-fire"></i></label>
+        <a></a> </div>
     </div>
   </div>
 </div>
+<div id="particles-js"></div>
 <div class="overlay"></div>
-
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->  
 <!-- jQuery CDN --> 
 <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script> 
 <!-- Bootstrap Js CDN --> 
@@ -109,7 +100,7 @@
                     $('a[aria-expanded=true]').attr('aria-expanded', 'false');
                 });
             });
-        </script>
-	
+        </script> 
+<script type="text/javascript" src="js/scripts.js"></script>
 </body>
 </html>
