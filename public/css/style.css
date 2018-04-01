@@ -29,6 +29,8 @@ h1 {
 
 .h1, .h2, .h3, h1, h2, h3 {
     margin: 0;
+	color:gold;
+	text-shadow: 0px 0px 25px orange;
 }
 
 body {
@@ -54,3 +56,27 @@ p {
 	padding: 10px;	
 }
 
+.navbar {
+	background: transparent;
+	border: none;	
+}
+
+.navbar-btn {
+	box-shadow: none;
+	outline: none !important;
+	border: none;
+	color: #2d3035;
+	background: #f44d2f;
+}
+
+.navbar-btn:hover{
+	background: gold;
+	color: #f44d2f;
+	transition: ease-out all 0.3s;
+	box-shadow: 0px 0px 25px orange;
+
+}
+
+.navbar-btn:after{
+	transition: all 0.3s;
+}

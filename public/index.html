@@ -1,12 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>Page Title</title>
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<title>Roastr</title>
+<!-- Toggleswitch css link-->
+
+<!-- Bootstrap CSS CDN -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+<!-- Scrollbar Custom CSS -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+<!-- Particles CSS -->
+<link href="css/particles.css" rel="stylesheet" type="text/css">
+<!-- Our Custom CSS -->
+<link href="css/toggle.css" rel="stylesheet" type="text/css">
+<link href="css/main.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
+
 </head>
 <header class="container-fluid">
-  <div class="jumbotron text-center">
+  <div class="row">
     <h1>Roastr</h1>
     <p>Roast your "friends"</p>
 </div>
@@ -16,27 +30,31 @@
 <div class="container">
   <div class="row">
 	  <!-- left column -->
-    <div class="col-md-6 col-sm-6 col-xs-6 text-center" id="login"> <h3>Log In</h3>
+    <div class="col-md-6 col-sm-6 col-xs-6 text-center" id="login"> 
+		<div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
+			<h3>Log In</h3>
       <form>
         <div class="input-group"> <span class="input-group-addon" id="basic-addon1">@</span>
           <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <label for="loginPassword">Password</label>
+          <input type="password" class="form-control" id="loginPassword" placeholder="Password">
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
     </div>
+		</div>
 	  <!-- right column -->
-    <div class="col-md-6 col-sm-6 col-xs-6 text-center" id="signup"> <h3>Sign Up</h3>
+    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 text-center" id="signup"> <h3>Sign Up</h3>
+		<div class="col-lg-11 col-lg-offset-1 col-md-11 col-md-offset-1 col-sm-11 col-sm-offset-1 col-xs-11 col-xs-offset-1">
       <form>
         <div class="input-group"> <span class="input-group-addon" id="basic-addon1">@</span>
           <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
         </div>
         <div class="form-group">
-          <label for="exampleInputPassword1">Password</label>
-          <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password">
+          <label for="signupPassword">Password</label>
+          <input type="password" class="form-control" id="signupPassword" placeholder="Password">
         </div>
         <div class="form-group">
           <label for="basic-url">Your vanity URL</label>
@@ -46,12 +64,14 @@
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
       </form>
+	  </div>
     </div>
   </div>
 </div>
+	
 <footer class="footer text-center">
   <div class="container-fluid">
-    <div class="container"><br>
+    <div class="container">
       <p>Ian, Asad, Anthony & Chuck made this.</p>
     </div>
   </div>

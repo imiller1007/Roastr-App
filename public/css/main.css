@@ -11,30 +11,6 @@ a, a:hover, a:focus {
 	transition: all eas0.3s;
 	color: #f44d2f;
 }
-.navbar {
-	background: transparent;
-	border: none;	
-}
-
-.navbar-btn {
-	box-shadow: none;
-	outline: none !important;
-	border: none;
-	color: #2d3035;
-	background: #f44d2f;
-}
-
-.navbar-btn:hover{
-	background: gold;
-	color: #f44d2f;
-	transition: ease-out all 0.3s;
-	box-shadow: 0px 0px 25px orange;
-
-}
-
-.navbar-btn:after{
-	transition: all 0.3s;
-}
 
 .line {
 	width: 100%;
@@ -46,14 +22,7 @@ a, a:hover, a:focus {
     CONTENT STYLE
 ----------------------------------------------------- */
 
-#content {
-	width: 100%;
-	min-height: 100vh;
-	transition: all 0.3s;
-	position: absolute;
-	padding-top:20px;
-	
-}
+
 
 #profile-img {
 	margin: 40px 0 0 0;
