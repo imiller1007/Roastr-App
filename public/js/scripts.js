@@ -1,23 +1,23 @@
 particlesJS("particles-js", {
 	"particles": {
 		"number": {
-			"value": 48,
+			"value": 53,
 			"density": {
 				"enable": true,
-				"value_area": 721.5354273894853
+				"value_area": 481.0236182596568
 			}
 		},
 		"color": {
-			"value": "#f3ffa0"
+			"value": "#ffd700"
 		},
 		"shape": {
-			"type": "polygon",
+			"type": "circle",
 			"stroke": {
-				"width": 1,
-				"color": "#ffe100"
+				"width": 2,
+				"color": "#ffa500"
 			},
 			"polygon": {
-				"nb_sides": 6
+				"nb_sides": 5
 			},
 			"image": {
 				"src": "img/github.svg",
@@ -29,18 +29,18 @@ particlesJS("particles-js", {
 			"value": 1,
 			"random": true,
 			"anim": {
-				"enable": true,
-				"speed": 2.679854800594439,
-				"opacity_min": 0.04060386061506725,
+				"enable": false,
+				"speed": 1,
+				"opacity_min": 0.1,
 				"sync": false
 			}
 		},
 		"size": {
-			"value": 3,
+			"value": 2,
 			"random": true,
 			"anim": {
-				"enable": false,
-				"speed": 40,
+				"enable": true,
+				"speed": 12.181158184520175,
 				"size_min": 0.1,
 				"sync": false
 			}
@@ -54,16 +54,16 @@ particlesJS("particles-js", {
 		},
 		"move": {
 			"enable": true,
-			"speed": 1.603412060865523,
-			"direction": "top",
+			"speed": 6,
+			"direction": "top-left",
 			"random": true,
 			"straight": false,
 			"out_mode": "out",
 			"bounce": false,
 			"attract": {
 				"enable": true,
-				"rotateX": 1202.559045649142,
-				"rotateY": 1200
+				"rotateX": 1657.2100474277727,
+				"rotateY": 789.1476416322727
 			}
 		}
 	},
@@ -72,17 +72,17 @@ particlesJS("particles-js", {
 		"events": {
 			"onhover": {
 				"enable": true,
-				"mode": "grab"
+				"mode": "repulse"
 			},
 			"onclick": {
-				"enable": true,
-				"mode": "push"
+				"enable": false,
+				"mode": "remove"
 			},
 			"resize": true
 		},
 		"modes": {
 			"grab": {
-				"distance": 60,
+				"distance": 400,
 				"line_linked": {
 					"opacity": 1
 				}
@@ -95,7 +95,7 @@ particlesJS("particles-js", {
 				"speed": 3
 			},
 			"repulse": {
-				"distance": 64.96617698410762,
+				"distance": 73.08694910712106,
 				"duration": 0.4
 			},
 			"push": {
