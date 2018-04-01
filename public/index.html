@@ -14,20 +14,23 @@
 <!-- Particles CSS -->
 <link href="css/particles.css" rel="stylesheet" type="text/css">
 <!-- Our Custom CSS -->
+<link href="css/side-nav.css" rel="stylesheet" type="text/css">
 <link href="css/toggle.css" rel="stylesheet" type="text/css">
 <link href="css/main.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
 
 </head>
-<header class="container-fluid">
-  <div class="row">
-    <h1>Roastr</h1>
-    <p>Roast your "friends"</p>
-</div>
-</header>
+<body>
+<div class="wrapper">
+<!-- Sidebar Holder -->
 
-<body class="container-fluid">
-<div class="container">
+<!-- Page Content Holder -->
+<div id="content">
+
+		<h1 class="text-center">Roastr Logo</h1>
+
+
+	<div class="container">
   <div class="row">
 	  <!-- left column -->
     <div class="col-md-6 col-sm-6 col-xs-6 text-center" id="login"> 
@@ -69,11 +72,40 @@
   </div>
 </div>
 	
-<footer class="footer text-center">
-  <div class="container-fluid">
-    <div class="container">
-      <p>Ian, Asad, Anthony & Chuck made this.</p>
-    </div>
-  </div>
-</footer>
+
+	
+	
+	
+	
+	
+	
+</div>
+<div id="particles-js"></div>
+<div class="overlay"></div>
+<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->  
+<!-- jQuery CDN -->
+<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script> 
+<!-- Bootstrap Js CDN --> 
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
+<!-- jQuery Custom Scroller CDN --> 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script> 
+<script type="text/javascript">
+            $(document).ready(function () {
+                $("#sidebar").mCustomScrollbar({
+                    theme: "minimal"
+                });
+                $('#dismiss, .overlay').on('click', function () {
+                    $('#sidebar').removeClass('active');
+                    $('.overlay').fadeOut();
+                });
+                $('#sidebarCollapse').on('click', function () {
+                    $('#sidebar').addClass('active');
+                    $('.overlay').fadeIn();
+                    $('.collapse.in').toggleClass('in');
+                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+                });
+            });
+        </script> 
+<script type="text/javascript" src="js/scripts.js"></script>
 </body>
+</html>
