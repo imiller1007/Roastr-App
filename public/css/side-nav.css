@@ -1,0 +1,125 @@
+/* ---------------------------------------------------
+    SIDEBAR STYLE
+----------------------------------------------------- */
+
+/*deep orange = #f44d2f*/
+/*orange*/
+/*gold*/
+/*dark cool grey #191b1e*/
+/*cool grey #2d3035*/
+
+
+#sidebar {
+	width: 250px;
+	position: fixed;
+	top: 0;
+	left: -250px;
+	height: 100vh;
+	z-index: 999;
+	background: #191b1e;
+	transition: ease-out all 0.3s;
+	overflow-y: scroll;
+	box-shadow: 0 0 5px orange;
+	border-right: 1px solid gold;
+}
+
+#sidebar.active {
+	left: 0;
+}
+
+#dismiss {
+	width: 35px;
+	height: 35px;
+	line-height: 35px;
+	text-align: center;
+	background: #f44d2f;
+	position: absolute;
+	top: 10px;
+	right: 10px;
+	cursor: pointer;
+	transition: ease-out all 0.3s;
+	border-radius: 5px;
+}
+
+#dismiss:hover {
+	background: gold;
+	color: #f44d2f;
+	box-shadow: 0px 0px 25px orange;
+}
+
+.overlay {
+	position: fixed;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background: rgba(0, 0, 0, 0.7);
+	z-index: 998;
+	display: none;
+}
+
+#sidebar ul.components {
+	padding: 20px 0;	
+}
+
+#sidebar ul p {
+	color: #fff;
+	padding: 10px;
+}
+
+#sidebar ul li a {
+	background: #191b1e;
+	padding: 10px;
+	font-size: 1.1em;
+	display: block;
+	color: #f44d2f;
+}
+
+#sidebar ul li a:hover {
+	color: #f44d2f;
+	background: gold;
+	box-shadow: 0 0 10px orange;
+	transition: ease-out all 0.3s;
+}
+
+#sidebar ul li.active > a, a[aria-expanded="true"] {
+	background: transparent;
+}
+
+a[data-toggle="collapse"] {
+	position: relative;
+}
+
+a[aria-expanded="false"]::before, a[aria-expanded="true"]::before {
+	content: '\e259';
+	display: block;
+	position: absolute;
+	right: 20px;
+	font-family: 'Glyphicons Halflings';
+	font-size: 0.6em;
+}
+
+a[aria-expanded="true"]::before {
+	content: '\e260';
+}
+
+ul ul a {
+	font-size: 0.9em !important;
+	padding-left: 30px !important;
+	background: transparent;
+}
+
+ul.CTAs {
+	padding: 20px;
+}
+
+ul.CTAs a {
+	text-align: center;
+	font-size: 0.9em !important;
+	display: block;
+	border-radius: 5px;
+	margin-bottom: 5px;
+}
+
+#profile-img {
+	margin: 40px 0 0 0;
+}
