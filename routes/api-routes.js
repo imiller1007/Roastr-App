@@ -10,7 +10,7 @@ var User = require("../models/users.js");
 // =============================================================
 module.exports = function(app) {
 
-    
+
 
     // Get all users
     app.get("/api/all-users", function(req, res) {
@@ -34,7 +34,8 @@ module.exports = function(app) {
   
       User.create({
         username: req.body.username,
-        password: req.body.password
+        password: req.body.password,
+        imgURL:req.body.imgURL
       }).then(function(results) {
         // `results` here would be the newly created user
         res.end();

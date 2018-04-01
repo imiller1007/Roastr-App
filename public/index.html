@@ -18,7 +18,10 @@
 <link href="css/toggle.css" rel="stylesheet" type="text/css">
 <link href="css/main.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
-
+<script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
 </head>
 <body>
 <div class="wrapper">
@@ -83,16 +86,16 @@
 		<div class="col-lg-11 col-lg-offset-1 col-md-11 col-md-offset-1 col-sm-11 col-sm-offset-1 col-xs-11 col-xs-offset-1">
       <form>
         <div class="input-group"> <span class="input-group-addon" id="basic-addon1">@</span>
-          <input type="text" class="form-control" placeholder="Username" aria-describedby="basic-addon1">
+          <input type="text" class="form-control" id="signupUsername" placeholder="Username" aria-describedby="basic-addon1">
         </div>
         <div class="form-group">
-          <label for="signupPassword">Password</label>
+          <label for="exampleInputPassword1">Password</label>
           <input type="password" class="form-control" id="signupPassword" placeholder="Password">
         </div>
         <div class="form-group">
           <label for="basic-url">Your vanity URL</label>
           <div class="input-group"> <span class="input-group-addon" id="basic-addon3">https://imgur.com/whatevs/</span>
-            <input type="text" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+            <input type="text" class="form-control" id="signupPic" aria-describedby="basic-addon3">
           </div>
         </div>
         <button type="submit" class="btn btn-default">Submit</button>
@@ -133,4 +136,5 @@
         </script> 
 <script type="text/javascript" src="js/particles.js"></script>
 </body>
+<script type="text/javascript" src="./js/login.js" ></script>
 </html>
