@@ -11,8 +11,9 @@
 
 h1 {
 	font-size: 48px;
-	color: white;
-	text-shadow: 0px 0px 25px white;;
+	color: orange;
+	text-shadow: 0px 0px 25px orange;
+	text-o
 }
 
 .h1, .h2, .h3, h1, h2, h3 {
@@ -38,12 +39,12 @@ body {
 
 .rightRoast {
 	padding: 10px; 
-	background: rgba(255, 255, 0, .15)
+	background: orange;
 
 }
 
 .leftRoast {
 	border-right: 1px solid;
 	padding: 10px;
-	background: rgba(255, 255, 0, .15)
+	background: orange;
 }

@@ -7,7 +7,7 @@ body {
 	background-repeat: no-repeat;
 	height: 2000px;
 	color: #191b1e;
-	padding-top: 30px;
+
 }
 p {
 	font-size: 1.1em;
@@ -169,8 +169,8 @@ a.article, a.article:hover {
 	min-height: 100vh;
 	transition: all 0.3s;
 	position: absolute;
-	top: 0;
-	right: 0;
+	padding-top:20px;
+	
 }
 .nav {
 	float: right;
