@@ -31,7 +31,7 @@ $("#loginButton").on("click", function(){
         }
     if(chosenUser === data.username && chosenPass === data.password){
 
-        window.location.href = './main';
+        window.location.href = '/main';
     }
 
 })
