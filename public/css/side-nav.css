@@ -19,8 +19,8 @@
 	background: #191b1e;
 	transition: ease-out all 0.3s;
 	overflow-y: scroll;
-	box-shadow: 0 0 5px orange;
-	border-right: 1px solid gold;
+	box-shadow: 0 0 10px orange;
+	border-right: 2px solid gold;
 }
 
 #sidebar.active {
