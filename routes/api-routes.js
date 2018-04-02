@@ -42,5 +42,36 @@ module.exports = function(app) {
       });
   
     });
+
+    // Find one user
+    app.get("/api/:users?", function(req, res) {
+      // If the user provides a specific character in the URL...
+      if (req.params.users) {
+        // Then display the JSON for ONLY that user.
+        // (Note how we're using the ORM here to run our searches)
+        User.findOne({
+          where: {
+            routeName: req.params.users
+          }
+        }).then(function(result) {
+          return res.json(result);
+        });
+      }
+      else {
+        alert("Username or password was not correct, please try again.")
+      }
+    });
   
+
+
+
+
+
+
+
+
+
+
+
+
   };
