@@ -18,7 +18,9 @@ a, a:hover, a:focus {
 }
 
 .glyphicon:hover {
-	color: #f44d2f;
+	color: gold;
+	text-shadow: 0 0 10px orange;
+	transition: all 0.3s ease-out;
 }
 
 h1 {
@@ -62,7 +64,10 @@ p {
 	border: none;
 	color: #2d3035;
 	background: #f44d2f;
-	
+}
+
+.btn-info:active{
+	background:#2D3035;
 }
 
 .btn:hover{
@@ -75,6 +80,7 @@ p {
 
 .btn:after{
 	transition: all 0.3s;
+	background:#2D3035;
 }
 
 .navbar {
@@ -124,6 +130,13 @@ p {
 	background: gold;
 	transition: all .3s ease-out;
 }
+
+label {
+	padding-top:20px;
+}
+
 label:active {
 	color:#F44D2F;
 }
+
+

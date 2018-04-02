@@ -34,6 +34,7 @@ a, a:hover, a:focus {
 
 .navbar-btn:after{
 	transition: all 0.3s;
+	background:#2D3035;
 }
 
 .line {
@@ -95,3 +96,8 @@ a, a:hover, a:focus {
 }
 
 
+
+label {
+	color:#2D3035;
+	padding-top:20px;
+}
