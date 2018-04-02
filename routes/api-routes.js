@@ -42,5 +42,35 @@ module.exports = function(app) {
       });
   
     });
+
+    // Find one user
+    app.get("/api/:users?", function(req, res) {
+     
+      if (req.params.users) {
+        
+        User.findOne({
+          where: {
+            routeName: req.params.users
+          }
+        }).then(function(result) {
+          return res.json(result);
+        });
+      }
+      else {
+        alert("Username or password was not correct, please try again.")
+      }
+    });
   
+
+
+
+
+
+
+
+
+
+
+
+
   };
