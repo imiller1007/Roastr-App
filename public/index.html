@@ -9,15 +9,12 @@
 
 <!-- Bootstrap CSS CDN -->
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<!-- Scrollbar Custom CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
 <!-- Particles CSS -->
 <link href="css/particles.css" rel="stylesheet" type="text/css">
 <!-- Our Custom CSS -->
-<link href="css/side-nav.css" rel="stylesheet" type="text/css">
-<link href="css/toggle.css" rel="stylesheet" type="text/css">
 <link href="css/main.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/index.css" rel="stylesheet" type="text/css">
 <script
   src="https://code.jquery.com/jquery-3.3.1.js"
   integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
@@ -26,45 +23,15 @@
 <body>
 <div class="wrapper">
 <!-- Sidebar Holder -->
-<nav id="sidebar">
-  <div id="dismiss"><i class="glyphicon glyphicon-fire"></i> </div>
-  <!--profile img-->
-  <div class="row" id="profile-img">
-    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-2"></div>
-    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-8"><img src="https://vignette.wikia.nocookie.net/animaljam/images/5/5c/Chuck_Norris.jpg/revision/latest?cb=20140730185108" class="img-responsive img-circle" alt="Responsive image"></div>
-  </div>
-  <!-- side menu elements -->
-  <ul class="list-unstyled components">
-    <li class="active"> <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Stats</a>
-      <ul class="collapse list-unstyled" id="homeSubmenu">
-        <li><a href="#">Score: ##</a></li>
-        <li><a href="#">Rank: ##</a></li>
-      </ul>
-    </li>
-    <li> <a href="#">Search</a> </li>
-    <li> <a href="#">Log Out</a> </li>
-    <li>
-      <p>This app was created by Asad, Ian, Anthony and Chuck.</p>
-    </li>
-  </ul>
-	<!-- sidebar logo -->
-  <div class="sidebar-header">
-    <h1 class="text-center">Roastr</h1>
-  </div>
-</nav>
+
 <!-- Page Content Holder -->
 <div id="content">
 <div class="container">
-
 		<h1 class="text-center">Roastr Logo</h1>
-  
-    
-      
-    
 </div>
 <!--Start feed-->
 <div class="container">
-	<div class="row">
+	<div class="row col-lg-10 col-lg-offset-1 col-md-10">
 	  <!-- left column -->
     <div class="col-md-6 col-sm-6 col-xs-6 text-center" id="login"> 
 		<div class="col-lg-11 col-md-11 col-sm-11 col-xs-11">
@@ -116,24 +83,7 @@
 <!-- Bootstrap Js CDN --> 
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
 <!-- jQuery Custom Scroller CDN --> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script> 
-<script type="text/javascript">
-            $(document).ready(function () {
-                $("#sidebar").mCustomScrollbar({
-                    theme: "minimal"
-                });
-                $('#dismiss, .overlay').on('click', function () {
-                    $('#sidebar').removeClass('active');
-                    $('.overlay').fadeOut();
-                });
-                $('#sidebarCollapse').on('click', function () {
-                    $('#sidebar').addClass('active');
-                    $('.overlay').fadeIn();
-                    $('.collapse.in').toggleClass('in');
-                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-                });
-            });
-        </script> 
+
 <script type="text/javascript" src="js/particles.js"></script>
 </body>
 <script type="text/javascript" src="./js/login.js" ></script>

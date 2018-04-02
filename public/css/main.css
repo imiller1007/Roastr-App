@@ -34,6 +34,7 @@ a, a:hover, a:focus {
 
 .navbar-btn:after{
 	transition: all 0.3s;
+	background:#2D3035;
 }
 
 .line {
@@ -63,9 +64,10 @@ a, a:hover, a:focus {
 .title {
 	height: 30px;
 	vertical-align: middle;
-	background: #2d3035;
-	color: white;
+	background: #f44d2f;
+	color:#191b1e;
 	padding: 5px;
+
 }
 
 .leftRoast{
@@ -81,7 +83,7 @@ a, a:hover, a:focus {
 	border-radius: 10px;
 	overflow: hidden;
 	border: 2px solid gold;
-	background: #ffe188;
+	background:#2D3035;
 	box-shadow: 0 0 10px orange;
 }
 
@@ -94,3 +96,8 @@ a, a:hover, a:focus {
 }
 
 
+
+label {
+	color:#2D3035;
+	padding-top:20px;
+}
