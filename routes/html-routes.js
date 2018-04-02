@@ -15,7 +15,9 @@ module.exports = function(app) {
   });
 
 
-
+  app.get("/main", function(req, res) {
+    res.sendFile(path.join(__dirname, "../main.html"))
+  });
 
   
 };

@@ -4,7 +4,7 @@
 
 // Dependencies
 // =============================================================
-var User = require("../models/users.js");
+var db = require("../models/index.js");
 
 // Routes
 // =============================================================
@@ -19,7 +19,7 @@ module.exports = function(app) {
       // Sequelize queries are asynchronous, which helps with perceived speed.
       // If we want something to be guaranteed to happen after the query, we'll use
       // the .then function
-      User.findAll({}).then(function(results) {
+      db.user.findAll({}).then(function(results) {
         // results are available to us inside the .then
         res.json(results);
       });
@@ -32,7 +32,7 @@ module.exports = function(app) {
       console.log("User Data:");
       console.log(req.body);
   
-      User.create({
+      db.user.create({
         username: req.body.username,
         password: req.body.password,
         imgURL:req.body.imgURL
@@ -48,9 +48,9 @@ module.exports = function(app) {
      
       if (req.params.users) {
         
-        User.findOne({
+        db.user.findOne({
           where: {
-            routeName: req.params.users
+            username: req.params.users
           }
         }).then(function(result) {
           return res.json(result);
@@ -59,9 +59,10 @@ module.exports = function(app) {
       else {
         alert("Username or password was not correct, please try again.")
       }
+
     });
   
-
+  
 
 
 

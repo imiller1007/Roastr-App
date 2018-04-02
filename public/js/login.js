@@ -19,10 +19,20 @@ $("#signupButton").on("click", function(){
 
 
 $("#loginButton").on("click", function(){
+
+    event.preventDefault();
+
     var chosenUser = $("#loginName").val().trim()
-    var chosenPass = $("#loginPass").val().trim()
+    var chosenPass = $("#loginPassword").val().trim()
+    $.get("/api/" + chosenUser, function(data) {
+        console.log(data);
+    if (!data || chosenPass !== data.password) {
+        alert("Username/password is incorrect. Please try again.")
+        }
+    if(chosenUser === data.username && chosenPass === data.password){
 
-
+        window.location.href = './main';
+    }
 
 })
 
@@ -33,4 +43,4 @@ $("#loginButton").on("click", function(){
 
 
 
-
+});
