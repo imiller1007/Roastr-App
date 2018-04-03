@@ -7,11 +7,19 @@
 var express = require("express");
 var bodyParser = require("body-parser");
 var db = require("./models");
-
+var session = require('express-session');
+var cookieParser = require("cookie-parser");
 // Sets up the Express App
 // =============================================================
 var app = express();
 var PORT = process.env.PORT || 8080;
+
+app.use(cookieParser());
+
+app.use(session({secret: "Shh, its a secret!",
+                saveUninitialized: true,
+                resave: false
+}));
 
 db.sequelize.sync().then(function(){
   app.listen(PORT, function(){

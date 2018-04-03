@@ -37,6 +37,8 @@ module.exports = function(app) {
         password: req.body.password,
         imgURL:req.body.imgURL
       }).then(function(results) {
+        req.session.user = results.dataValues
+        console.log(req.session.user)
         // `results` here would be the newly created user
         res.end();
       });
