@@ -19,8 +19,13 @@
 	background: #191b1e;
 	transition: ease-out all 0.3s;
 	overflow-y: scroll;
+<<<<<<< HEAD
+	box-shadow: 0 0 5px orange;
+	border-right: 1px solid gold;
+=======
 	box-shadow: 0 0 10px orange;
 	border-right: 2px solid gold;
+>>>>>>> 3bfbaa592030b9be9c3d4b1ad7811450bba1e42e
 }
 
 #sidebar.active {
@@ -34,11 +39,12 @@
 	text-align: center;
 	background: #f44d2f;
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 20px;
+	right: 20px;
 	cursor: pointer;
 	transition: ease-out all 0.3s;
 	border-radius: 5px;
+	padding: 3px;
 }
 
 #dismiss:hover {
@@ -62,7 +68,6 @@
 }
 
 #sidebar ul p {
-	color: #fff;
 	padding: 10px;
 }
 

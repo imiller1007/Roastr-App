@@ -11,6 +11,7 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
 <!-- Particles CSS -->
 <link href="css/particles.css" rel="stylesheet" type="text/css">
+<link href="css/smoke.css" rel="stylesheet" type="text/css">
 <!-- Our Custom CSS -->
 <link href="css/main.css" rel="stylesheet" type="text/css">
 <link href="css/style.css" rel="stylesheet" type="text/css">
@@ -21,13 +22,14 @@
   crossorigin="anonymous"></script>
 </head>
 <body>
+
 <div class="wrapper">
 <!-- Sidebar Holder -->
 
 <!-- Page Content Holder -->
 <div id="content">
 <div class="container">
-		<h1 class="text-center">Roastr Logo</h1>
+		<div class="text-center col-lg-6 col-offset-lg-3 col-md-6 col-md-offset-3"><img src="images/roastr_logo-01.png" class="img-responsive" alt="Responsive image"></div>
 </div>
 <!--Start feed-->
 <div class="container">
@@ -42,7 +44,7 @@
         </div>
         <div class="form-group">
           <label for="loginPassword">Password</label>
-          <input type="password" class="form-control" id="loginPassword" id="loginPass" placeholder="Password">
+          <input type="password" class="form-control" id="loginPassword" placeholder="Password">
         </div>
         <button type="submit" class="btn btn-default" id="loginButton">Submit</button>
       </form>
@@ -75,7 +77,9 @@
 	
 	
 </div>
+
 <div id="particles-js"></div>
+<div id="particles2-js"></div>
 <div class="overlay"></div>
 <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib -->  
 <!-- jQuery CDN --> 
@@ -85,6 +89,7 @@
 <!-- jQuery Custom Scroller CDN --> 
 
 <script type="text/javascript" src="js/particles.js"></script>
+	<script type="text/javascript" src="js/smoke.js"></script>
 </body>
 <script type="text/javascript" src="./js/login.js" ></script>
 </html>
