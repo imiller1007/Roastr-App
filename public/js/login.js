@@ -24,7 +24,7 @@ $("#loginButton").on("click", function(){
 
     var chosenUser = $("#loginName").val().trim()
     var chosenPass = $("#loginPassword").val().trim()
-    $.get("/api/" + chosenUser, function(data) {
+    $.get("/api/users/" + chosenUser, function(data) {
         console.log(data);
     if (!data || chosenPass !== data.password) {
         alert("Username/password is incorrect. Please try again.")

@@ -46,7 +46,7 @@ module.exports = function(app) {
     });
 
     // Find one user
-    app.get("/api/:users?", function(req, res) {
+    app.get("/api/users/:users?", function(req, res) {
      
       if (req.params.users) {
         
@@ -65,6 +65,13 @@ module.exports = function(app) {
       }
 
     });
+
+    //Grab session data for front-end
+    app.get("/api/sessioninfo", function(req, res){
+      var userInfo = req.session.user
+
+      res.json(userInfo)
+    })
   
   
 
