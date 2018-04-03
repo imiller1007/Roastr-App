@@ -5,12 +5,14 @@
 // Dependencies
 // =============================================================
 var db = require("../models/index.js");
-
-// Routes
 // =============================================================
+
+
 module.exports = function(app) {
 
 
+//======================= USER ROUTES =========================================
+//=============================================================================
 
     // Get all users
     app.get("/api/all-users", function(req, res) {
@@ -72,17 +74,44 @@ module.exports = function(app) {
 
       res.json(userInfo)
     })
+
+
+//======================= ROAST ROUTES =========================================
+//=============================================================================
   
-  
+// GET route for getting all of the roasts
+app.get("/api/all-roasts", function(req, res) {
+  db.user.findAll({}).then(function(results) {
+    // results are available to us inside the .then
+    res.json(results);
+  });
+});
+
+
+// Get route for retrieving a single Roast
+app.get("/api/select-roast/:id", function(req, res) {
+  db.Roast.findOne({
+    where: {
+      id: req.params.id
+    }
+  }).then(function(data) {
+    console.log(data);
+    res.json(data);
+  });
+});
+
+
+// DELETE route for deleting roast
+app.delete("/api/del-roast/:id", function(req, res) {
+  db.Roast.destroy({
+    where: {
+      id: req.params.id
+    }
+  }).then(function(data) {
+    res.json(data);
+  });
+});
 
 
 
-
-
-
-
-
-
-
-
-  };
+};

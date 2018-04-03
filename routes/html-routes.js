@@ -24,5 +24,16 @@ module.exports = function(app) {
     console.log("==================================")
   });
 
+  app.get("/roast", function(req, res){
+    res.sendFile(path.join(__dirname, "../public/roast.html"))
+  });
+
+  app.get("/inbox", function(req, res){
+    res.sendFile(path.join(__dirname, "../public/inbox.html"))
+  });
+
+  app.get("/reply", function(req, res){
+    res.sendFile(path.join(__dirname, "../public/reply"))
+  })
   
 };
