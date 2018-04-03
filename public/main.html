@@ -24,21 +24,25 @@
 <div class="wrapper">
 <!-- Sidebar Holder -->
 <nav id="sidebar">
-  <div id="dismiss"><i class="glyphicon glyphicon-fire"></i> </div>
+  <div id="dismiss"><i class="glyphicon glyphicon-menu-hamburger"></i> </div>
   <!--profile img-->
   <div class="row" id="profile-img">
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-2"></div>
     <div class="col-xs-10 col-sm-10 col-md-10 col-lg-8" id="userImageDiv"><img src="https://vignette.wikia.nocookie.net/animaljam/images/5/5c/Chuck_Norris.jpg/revision/latest?cb=20140730185108" class="img-responsive img-circle" alt="Responsive image"></div>
   </div>
-  <!-- side menu elements -->
+<!-- username -->
+  <div id="sideName"><h1>sideName</h1>
+	</div>
+  <!-- side menu items -->
+	
   <ul class="list-unstyled components">
+	<li> <a href="#">Roast</a> </li>
     <li class="active"> <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Stats</a>
       <ul class="collapse list-unstyled" id="homeSubmenu">
         <li><a href="#">Score: ##</a></li>
         <li><a href="#">Rank: ##</a></li>
       </ul>
     </li>
-    <li> <a href="#">Search</a> </li>
     <li> <a href="#">Log Out</a> </li>
     <li>
       <p>This app was created by Asad, Ian, Anthony and Chuck.</p>
@@ -46,7 +50,7 @@
   </ul>
     <!-- sidebar logo -->
   <div class="sidebar-header">
-    <h1 class="text-center">Roastr</h1>
+    <img src="images/roastr_logo-01-01.png" class="img-responsive" alt="Responsive image">
   </div>
 </nav>
 <!-- Page Content Holder -->
@@ -71,11 +75,11 @@
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <div class="switch-toggle switch-3 switch-candy switch-candy-yellow">
         <input id="on" name="state-d" type="radio" checked="">
-        <label for="on"><em class="glyphicon glyphicon-fire"></em> 3</label>
+        <label for="on"><em class="glyphicon glyphicon-fire"></em><span id="countB"> 3</span></label>
         <input id="na" name="state-d" type="radio" disabled checked="checked">
         <label for="na" onclick=""><span class="glyphicon glyphicon-menu-left"></span>Roast<span class="glyphicon glyphicon-menu-right"></span></label>
         <input id="off" name="state-d" type="radio">
-        <label for="off">3 <em for="on" class="glyphicon glyphicon-fire"></em></label>
+        <label for="off"><span id="countB"> 3</span><em for="on" class="glyphicon glyphicon-fire"></em></label>
         <a></a> </div>
     </div>
   </div>
