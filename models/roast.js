@@ -15,16 +15,6 @@ var Roast = sequelize.define("roast", {
       allowNull: false
 
     },
-
-    userA: {
-      type: DataTypes.STRING,
-      allowNull: false
-    },
-
-    userB: {
-      allowNull: null,
-      type: DataTypes.INTEGER
-    },
     
     roast: {
       type: DataTypes.STRING,
@@ -43,12 +33,12 @@ var Roast = sequelize.define("roast", {
     },
 
   
-upVote: {
+roastTotal: {
   type: DataTypes.INTEGER,
   defaultValue: 0
 
 },
-downVote: {
+responseTotal: {
   type: DataTypes.INTEGER,
   defaultValue: 0
 
