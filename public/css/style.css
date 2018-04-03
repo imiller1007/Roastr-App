@@ -200,3 +200,7 @@ label:active {
 	text-shadow: 0 0 10px orange;
 }
 
+
+#sideName {
+	margin-left: 10px;
+}
