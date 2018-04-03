@@ -44,6 +44,7 @@
 	cursor: pointer;
 	transition: ease-out all 0.3s;
 	border-radius: 5px;
+	padding: 10px;
 }
 
 #dismiss:hover {
