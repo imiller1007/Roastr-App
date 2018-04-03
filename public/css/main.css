@@ -47,53 +47,8 @@ a, a:hover, a:focus {
     CONTENT STYLE
 ----------------------------------------------------- */
 
-#content {
-	width: 100%;
-	min-height: 100vh;
-	transition: all 0.3s;
-	position: absolute;
-	padding-top:20px;
-	
-}
 
-#profile-img {
-	margin: 40px 0 0 0;
-	
-}
 
-.title {
-	height: 30px;
-	vertical-align: middle;
-	background: #f44d2f;
-	color:#191b1e;
-	padding: 5px;
-
-}
-
-.leftRoast{
-	padding: 10px;
-	border-right: 1px solid orange;
-}
-
-.rightRoast{
-	padding: 10px;
-}
-
-.roast {
-	border-radius: 10px;
-	overflow: hidden;
-	border: 2px solid gold;
-	background:#2D3035;
-	box-shadow: 0 0 10px orange;
-}
-
-#content {
-	width: 100%;
-	min-height: 100vh;
-	transition: all 0.3s;
-	position: absolute;
-	padding-top:20px;
-}
 
 
 

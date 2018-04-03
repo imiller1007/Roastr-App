@@ -14,12 +14,12 @@ a, a:hover, a:focus {
 	color: inherit;
 	text-decoration: none;
 	transition: all eas0.3s;
-	color: #f44d2f;
+	color:#FFD700 #f44d2f;
 }
 
 .glyphicon:hover {
-	color: gold;
-	text-shadow: 0 0 10px orange;
+	color: white;
+	text-shadow: 0 0 10px yellow;
 	transition: all 0.3s ease-out;
 }
 
@@ -92,7 +92,8 @@ p {
 	border: 2px solid #f44d2f;
 	color: #f44d2f;
 	background:#2d3035;
-}
+	margin: 0;
+class="col-xs-12 col-sm-12 col-md-12 col-lg-12"}
 
 .form-control:focus{
 	border: 2px solid gold;
@@ -145,12 +146,12 @@ label:active {
 }
 
 .title {
-	height: 30px;
 	vertical-align: middle;
 	background: #f44d2f;
 	color:#191b1e;
 	padding: 5px;
-
+	height: auto;
+	font-size: 24px
 }
 
 .leftRoast{
@@ -178,4 +179,24 @@ label:active {
 	padding-top:20px;
 }
 
+.btn-group.open .dropdown-toggle {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+.dropdown-menu>li>a {
+    display: block;
+    padding: 5px 10px;
+    clear: both;
+    font-weight: 400;
+    line-height: 1.42857143;
+    color: #333;
+}
+
+.dropdown-menu>li>a:hover {
+    background: #FFD700;
+	box-shadow: 0 0 10px orange;
+	color:#F44D2F;
+	text-shadow: 0 0 10px orange;
+}
 
