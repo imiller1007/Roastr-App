@@ -39,12 +39,12 @@
 	text-align: center;
 	background: #f44d2f;
 	position: absolute;
-	top: 10px;
-	right: 10px;
+	top: 20px;
+	right: 20px;
 	cursor: pointer;
 	transition: ease-out all 0.3s;
 	border-radius: 5px;
-	padding: 10px;
+	padding: 3px;
 }
 
 #dismiss:hover {
@@ -68,7 +68,6 @@
 }
 
 #sidebar ul p {
-	color: #fff;
 	padding: 10px;
 }
 

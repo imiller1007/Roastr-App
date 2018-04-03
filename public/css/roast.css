@@ -7,9 +7,7 @@ form {
 	margin-bottom:0;
 }
 
-.search {
-	margin-bottom: 30px;
-}
+
 
 .btn-group {
 	width: 100%;
@@ -30,5 +28,32 @@ ul.a:hover{
 
 .submitRoast {
 	margin-top: 30px;
-	padding: 5px;
+	padding: 15px;
+	font-size: 24px;
+}
+
+
+
+.roastTextarea {
+	border-radius: 6px;
+}
+
+.glyphicon-search {
+	color:gold;
+	text-shadow: 0 0 10px orange;
+}
+
+a:hover {
+	background-color: gold;
+	text-shadow: 0 0 10px orange;
+	color:#F44D2F;
+}
+
+.input-group-addon {
+    padding: 0;
+	border-radius: 5px;
+}
+
+.input-group {
+	border-radius: 5px;
 }

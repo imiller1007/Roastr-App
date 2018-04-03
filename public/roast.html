@@ -58,17 +58,23 @@
 </div>
 <!--Start feed-->
 <div class="container">
-  <div class="col-lg-10 col-lg-offset-1 col-md-12 col-sm-12 col-xs-12">
-    <div class="btn-group search">
-      <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Search Users <span class="glyphicon glyphicon-search" aria-hidden="true"></span> </button>
+  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+	  <form>
+        <div class="input-group"> <span class="input-group-addon" id="basic-addon1"><div class="btn-group search">
+      <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> </button>
       <ul class="dropdown-menu">
         <li><a href="#">This is a user</a></li>
         <li><a href="#">This is also a user</a></li>
         <li><a href="#">This was supposed to be a user but something happened</a></li>
       </ul>
-    </div>
+    </div></span>
+          <input type="text" class="form-control" placeholder="Search users" id="loginName" aria-describedby="basic-addon1">
+        </div>
+        
+      </form>
+    
   </div>
-  <div class="roast col-xs-12 col-sm-12 col-md-12 col-lg-10 col-lg-offset-1">
+  <div class="roast col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
       <form>
         <div class="form-group">
@@ -78,9 +84,15 @@
     </div>
 	  
   </div>
-		<button class="btn col-lg-6 submitRoast">Roast!</button>
+		<button class="btn col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12 submitRoast"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span></button>
 
 </div>
+	
+	
+
+	
+	
+
 <!--particles -->
 <div id="particles-js"></div>
 <div class="overlay"></div>
