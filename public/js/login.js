@@ -30,7 +30,7 @@ $("#loginButton").on("click", function(){
         alert("Username/password is incorrect. Please try again.")
         }
     if(chosenUser === data.username && chosenPass === data.password){
-
+        console.log("Success!");
         window.location.href = '/main';
     }
 

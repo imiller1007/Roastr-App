@@ -55,6 +55,8 @@ module.exports = function(app) {
             username: req.params.users
           }
         }).then(function(result) {
+          req.session.user = result.dataValues
+          
           return res.json(result);
         });
       }
