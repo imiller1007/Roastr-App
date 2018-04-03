@@ -5,7 +5,7 @@ $.get("/api/sessioninfo", function(data){
 console.log("------------------------------------------")
 console.log(userInfo)
 console.log("------------------------------------------")
-
+$("#userImageDiv").html("<img src= '" + userInfo.imgURL + "' class='img-responsive img-circle' alt='Responsive image'>")
 })
 
-$("#userImageDiv").html("<img src= " + userInfo.imgURL + "class='img-responsive img-circle' alt='Responsive image'>")
+
