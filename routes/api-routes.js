@@ -73,8 +73,9 @@ module.exports = function(app) {
     //Grab session data for front-end
     app.get("/api/sessioninfo", function(req, res){
       var userInfo = req.session.user
-
+      console.log(userInfo)
       res.json(userInfo)
+      
     })
 
 
@@ -85,16 +86,25 @@ module.exports = function(app) {
 //======================= ROAST ROUTES =========================================
 //==============================================================================
   
+app.post("/api/new-roast", function(req, res){
+  db.roast.create({
+    userid1: req.body.userid1,
+    userid2: req.body.userid2,
+    roast: req.body.roast,
+  })
+})
+
+
 // GET route for getting all of the roasts
 app.get("/api/all-roasts", function(req, res) {
-  db.Roast.findAll({}).then(function(results) {
+  db.roast.findAll({}).then(function(results) {
     // results are available to us inside the .then
     res.json(results);
   });
 });
 
 app.get("/api/inbox-roasts/:id", function(req, res){
-  db.Roast.findAll({
+  db.roast.findAll({
     where: {
       userid2: req.params.id,
       response: null
@@ -105,7 +115,7 @@ app.get("/api/inbox-roasts/:id", function(req, res){
 
 // Get route for retrieving a single Roast
 app.get("/api/select-roast/:id", function(req, res) {
-  db.Roast.findOne({
+  db.roast.findOne({
     where: {
       id: req.params.id
     }
@@ -118,7 +128,7 @@ app.get("/api/select-roast/:id", function(req, res) {
 
 // DELETE route for deleting roast
 app.delete("/api/del-roast/:id", function(req, res) {
-  db.Roast.destroy({
+  db.roast.destroy({
     where: {
       id: req.params.id
     }

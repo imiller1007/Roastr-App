@@ -17,7 +17,14 @@ module.exports = function(app) {
 
 
   app.get("/main", function(req, res) {
+    if(!req.session.user){
+      res.redirect("/")
+    }
+    else{
     res.sendFile(path.join(__dirname, "../public/main.html"))
+    }
+    
+    
 
     console.log("==================================")
     console.log(req.session.user)
@@ -25,7 +32,12 @@ module.exports = function(app) {
   });
 
   app.get("/roast", function(req, res){
+    if(!req.session.user){
+      res.redirect("/")
+    }
+    else{
     res.sendFile(path.join(__dirname, "../public/roast.html"))
+    }
   });
 
   app.get("/inbox", function(req, res){
