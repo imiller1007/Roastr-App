@@ -209,8 +209,14 @@ label:active {
 	
 }
 
-
-
 .logo {
 	margin: -50px 0 0 0;
+}
+
+.line {
+	height: 2px;
+	background: gold;
+	box-shadow: 0 0 10px orange;
+	margin-top: 59px;
+	margin-bottom: 59px;
 }
