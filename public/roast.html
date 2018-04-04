@@ -1,129 +1,206 @@
-<!--<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-<head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<title>Roastr</title>
-<!-- Toggleswitch css link-->
-<!-- Bootstrap CSS CDN -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-<!-- Scrollbar Custom CSS -->
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
-<!-- Particles CSS -->
-<link href="css/particles.css" rel="stylesheet" type="text/css">
-<!-- Our Custom CSS -->
+  <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Roastr</title>
 
-<link href="css/side-nav.css" rel="stylesheet" type="text/css">
-<link href="css/style.css" rel="stylesheet" type="text/css">
-<link href="css/roast.css" rel="stylesheet" type="text/css">
-</head><body>
-<div class="wrapper">
-<!-- Sidebar Holder -->
+  <!-- Bootstrap CSS CDN -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Scrollbar Custom CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.min.css">
+
+  <!-- Particles CSS -->
+  <link href="css/particles.css" rel="stylesheet" type="text/css">
+
+  <!-- Smoke CSS -->
+  <link href="css/smoke.css" rel="stylesheet" type="text/css">
+
+  <!-- Our Custom CSS -->
+  <link href="css/side-nav.css" rel="stylesheet" type="text/css">
+  <link href="css/style.css" rel="stylesheet" type="text/css">
+  <link href="css/roast.css" rel="stylesheet" type="text/css">
+
+</head>
+
+<body>
+  <div class="wrapper">
+
+    <!-- Sidebar Holder -->
 <nav id="sidebar">
-  <div id="dismiss"><i class="glyphicon glyphicon-menu-hamburger"></i> </div>
+  <div id="dismiss">
+    <i class="glyphicon glyphicon-menu-hamburger"></i>
+  </div>
+
   <!--profile img-->
   <div class="row" id="profile-img">
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-2"></div>
-    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-8" id="userImageDiv"><img src="https://vignette.wikia.nocookie.net/animaljam/images/5/5c/Chuck_Norris.jpg/revision/latest?cb=20140730185108" class="img-responsive img-circle" alt="Responsive image"></div>
+    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-8" id="userImageDiv">
+      <img src="https://vignette.wikia.nocookie.net/animaljam/images/5/5c/Chuck_Norris.jpg/revision/latest?cb=20140730185108"
+        class="img-responsive img-circle" alt="Responsive image">
+    </div>
   </div>
-<!-- username -->
-  <div id="sideName"><h1>sideName</h1>
-	</div>
+
+  <!-- username -->
+  <div id="sideName">
+    <h1>sideName</h1>
+  </div>
+
   <!-- side menu items -->
-	
   <ul class="list-unstyled components">
-	<li> <a href="#">Roast</a> </li>
-    <li class="active"> <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Stats</a>
+
+    <!-- Roast link -->
+    <li>
+      <a href="#">Roast</a>
+    </li>
+
+    <!-- Sidbebar dropdown -->
+    <li class="active">
+
+      <!-- Collapse -->
+      <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Stats</a>
+
       <ul class="collapse list-unstyled" id="homeSubmenu">
-        <li><a href="#">Score: ##</a></li>
-        <li><a href="#">Rank: ##</a></li>
+
+        <!-- Score -->
+        <li>
+          <a href="#">Score: ##</a>
+        </li>
+
+        <!-- Rank -->
+        <li>
+          <a href="#">Rank: ##</a>
+        </li>
       </ul>
     </li>
-    <li> <a href="#">Log Out</a> </li>
+
+    <!-- Logout -->
+    <li>
+      <a href="#">Log Out</a>
+    </li>
+
+    <!-- Created by -->
     <li>
       <p>This app was created by Asad, Ian, Anthony and Chuck.</p>
     </li>
   </ul>
-    <!-- sidebar logo -->
+
+  <!-- sidebar logo -->
   <div class="sidebar-header">
     <img src="images/roastr_logo-01-01.png" class="img-responsive" alt="Responsive image">
   </div>
 </nav>
-<!-- Page Content Holder -->
+    <!-- End Nav -->
+
+    <!-- Page Content Holder -->
 <div id="content">
-<div class="container">
-  <nav class="navbar col-lg-10 col-lg-offset-1 navbar-default">
-    <div class="navbar-header">
-      <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn"> <i class="glyphicon glyphicon-menu-hamburger"></i></button>
-      <h1 class="logo text-center">Roastr Logo</h1>
-    </div>
-  </nav>
-</div>
-<!--Start feed-->
-<div class="container">
-  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
-	  <form>
-        <div class="input-group"> <span class="input-group-addon" id="basic-addon1"><div class="btn-group search">
-      <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> </button>
-      <ul class="dropdown-menu">
-        <li><a href="#">This is a user</a></li>
-        <li><a href="#">This is also a user</a></li>
-        <li><a href="#">This was supposed to be a user but something happened</a></li>
-      </ul>
-    </div></span>
+  <div class="container">
+
+    <!-- Navbar -->
+    <nav class="navbar col-lg-10 col-lg-offset-1 navbar-default">
+      <div class="navbar-header">
+        <!-- Sidenav collapse button -->
+        <button type="button" id="sidebarCollapse" class="btn btn-info navbar-btn">
+          <i class="glyphicon glyphicon-menu-hamburger"></i>
+        </button>
+
+        <!-- logo -->
+        <div class="row logo">
+            <div class="text-center col-lg-4 col-offset-lg-4 col-md-4 col-md-offset-4">
+              <img src="images/roastr_logo-01.png" class="img-responsive" alt="Responsive image">
+            </div>
+          </div>
+      </div>
+    </nav>
+  </div>
+
+  <!--Start feed-->
+  <div class="container">
+    <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+      <form>
+        <div class="input-group">
+          <span class="input-group-addon" id="basic-addon1">
+            <div class="btn-group search">
+              <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                <span class="glyphicon glyphicon-search" aria-hidden="true"></span>
+              </button>
+              <ul class="dropdown-menu">
+                <li>
+                  <a href="#">This is a user</a>
+                </li>
+                <li>
+                  <a href="#">This is also a user</a>
+                </li>
+                <li>
+                  <a href="#">This was supposed to be a user but something happened</a>
+                </li>
+              </ul>
+            </div>
+          </span>
           <input type="text" class="form-control" placeholder="Search users" id="loginName" aria-describedby="basic-addon1">
         </div>
-        
-      </form>
-    
-  </div>
-  <div class="roast col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <form>
-        <div class="form-group">
-          <textarea class="form-control roastTextarea" rows="3" placeholder="Roast here."></textarea>
-        </div>
       </form>
     </div>
-	  
+    <div class="roast col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+        <form>
+          <div class="form-group">
+            <textarea class="form-control roastTextarea" rows="3" placeholder="Roast here."></textarea>
+          </div>
+        </form>
+      </div>
+
+    </div>
+    <button class="btn col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12 submitRoast">
+      <span class="glyphicon glyphicon-fire" aria-hidden="true"></span>
+    </button>
   </div>
-		<button class="btn col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12 submitRoast"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span></button>
+      
+  <!--smoke -->
+  <div id="particles2-js"></div>
+  
+  <!--particles -->
+  <div id="particles-js"></div>
+  
+  <!-- sidebar overlay -->
+  <div class="overlay"></div>
 
-</div>
-	
-	
+  <!-- particles js deliver -->
+  <script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script>
 
-	
-	
+  <!-- smoke js -->
+  <script type="text/javascript" src="js/smoke.js"></script>
 
-<!--particles -->
-<div id="particles-js"></div>
-<div class="overlay"></div>
-<script src="http://cdn.jsdelivr.net/particles.js/2.0.0/particles.min.js"></script> <!-- stats.js lib --> 
-<!-- jQuery CDN --> 
-<script src="https://code.jquery.com/jquery-1.12.0.min.js"></script> 
-<!-- Bootstrap Js CDN --> 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script> 
-<!-- jQuery Custom Scroller CDN --> 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script> 
-<script type="text/javascript">
-            $(document).ready(function () {
-                $("#sidebar").mCustomScrollbar({
-                    theme: "minimal"
-                });
-                $('#dismiss, .overlay').on('click', function () {
-                    $('#sidebar').removeClass('active');
-                    $('.overlay').fadeOut();
-                });
-                $('#sidebarCollapse').on('click', function () {
-                    $('#sidebar').addClass('active');
-                    $('.overlay').fadeIn();
-                    $('.collapse.in').toggleClass('in');
-                    $('a[aria-expanded=true]').attr('aria-expanded', 'false');
-                });
-            });
-        </script> 
-<script type="text/javascript" src="js/particles.js"></script>
+  <!-- jQuery CDN -->
+  <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
+
+  <!-- Bootstrap Js CDN -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+  <!-- jQuery Custom Scroller CDN -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/malihu-custom-scrollbar-plugin/3.1.5/jquery.mCustomScrollbar.concat.min.js"></script>
+  <script type="text/javascript">
+    $(document).ready(function () {
+      $("#sidebar").mCustomScrollbar({
+        theme: "minimal"
+      });
+      $('#dismiss, .overlay').on('click', function () {
+        $('#sidebar').removeClass('active');
+        $('.overlay').fadeOut();
+      });
+      $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').addClass('active');
+        $('.overlay').fadeIn();
+        $('.collapse.in').toggleClass('in');
+        $('a[aria-expanded=true]').attr('aria-expanded', 'false');
+      });
+    });
+  </script>
+
+  <!-- particles js -->
+  <script type="text/javascript" src="js/particles.js"></script>
 </body>
+
 </html>
