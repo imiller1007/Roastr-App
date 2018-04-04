@@ -48,12 +48,10 @@ app.delete("/api/roasts/:id", function(req, res) {
 
 // Put route for updating a single roast ====================================================//
 app.put("/api/roasts/:id", function(req, res) {
-    db.roast.update(
-        req.body,
-    {
-    where: {
-        id: req.body.id
-    }
+    db.roast.update( req.body, {
+        where: {
+            id: req.body.id
+        }
     }).then(function(data) {
         res.json(data);
     });
