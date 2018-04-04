@@ -43,7 +43,9 @@ module.exports = function(app) {
         console.log(req.session.user)
         // `results` here would be the newly created user
         res.end();
-      });
+      }).catch(function(error){
+        res.json(error)
+      })
   
     });
 
@@ -77,7 +79,7 @@ module.exports = function(app) {
 
 
 //======================= ROAST ROUTES =========================================
-//=============================================================================
+//==============================================================================
   
 // GET route for getting all of the roasts
 app.get("/api/all-roasts", function(req, res) {
