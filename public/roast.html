@@ -21,29 +21,33 @@
 <div class="wrapper">
 <!-- Sidebar Holder -->
 <nav id="sidebar">
-  <div id="dismiss"><i class="glyphicon glyphicon-fire"></i> </div>
+  <div id="dismiss"><i class="glyphicon glyphicon-menu-hamburger"></i> </div>
   <!--profile img-->
   <div class="row" id="profile-img">
     <div class="col-xs-1 col-sm-1 col-md-1 col-lg-2"></div>
-    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-8"><img src="https://vignette.wikia.nocookie.net/animaljam/images/5/5c/Chuck_Norris.jpg/revision/latest?cb=20140730185108" class="img-responsive img-circle" alt="Responsive image"></div>
+    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-8" id="userImageDiv"><img src="https://vignette.wikia.nocookie.net/animaljam/images/5/5c/Chuck_Norris.jpg/revision/latest?cb=20140730185108" class="img-responsive img-circle" alt="Responsive image"></div>
   </div>
-  <!-- side menu elements -->
+<!-- username -->
+  <div id="sideName"><h1>sideName</h1>
+	</div>
+  <!-- side menu items -->
+	
   <ul class="list-unstyled components">
+	<li> <a href="#">Roast</a> </li>
     <li class="active"> <a href="#homeSubmenu" data-toggle="collapse" aria-expanded="false">Stats</a>
       <ul class="collapse list-unstyled" id="homeSubmenu">
         <li><a href="#">Score: ##</a></li>
         <li><a href="#">Rank: ##</a></li>
       </ul>
     </li>
-    <li> <a href="#">Search</a> </li>
     <li> <a href="#">Log Out</a> </li>
     <li>
       <p>This app was created by Asad, Ian, Anthony and Chuck.</p>
     </li>
   </ul>
-  <!-- sidebar logo -->
+    <!-- sidebar logo -->
   <div class="sidebar-header">
-    <h1 class="text-center">Roastr</h1>
+    <img src="images/roastr_logo-01-01.png" class="img-responsive" alt="Responsive image">
   </div>
 </nav>
 <!-- Page Content Holder -->
