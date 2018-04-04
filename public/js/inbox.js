@@ -2,18 +2,25 @@ $(document).ready(function() {
  
     // FIXXXX
     // Our new todos will go inside the todoContainer
-    var $todoContainer = $(".todo-container");
-    // Adding event listeners for deleting, editing, and adding todos
-    $(document).on("click", "button.delete", deleteTodo);
-    //$(document).on("click", "button.complete", toggleComplete);
-    //$(document).on("click", ".todo-item", editTodo);
-    
+    var $roastContainer = $(".roast-container");
+    // Adding event listeners for deleting, editing, and adding roasts
+    $(document).on("click", "button.delete", deleteRoast);
+   
+     // This function resets the roasts displayed with new roasts from the database
+  function initializeRows() {
+    $roastContainer.empty();
+    var rowsToAdd = [];
+    for (var i = 0; i < roast.length; i++) {
+      rowsToAdd.push(createNewRow(roast[i]));
+    }
+    $roastContainer.prepend(rowsToAdd);
+  }
   
-    // This function grabs todos from the database and updates the view
-    function getRoasts() {
-      $.get("//api/roast", function(data) {
+    // This function grabs roasts from the database and updates the view
+    function getRoasts(id) {
+      $.get("/api/select-roast/" + id, function(data) {
           //HOW TO JUST GET THE USERID2
-        roast = data;
+        roast = data.userid2;
         initializeRows();
       });
     }
@@ -25,17 +32,17 @@ $(document).ready(function() {
       $.ajax({
         method: "DELETE",
         url: "/api/roast/:id" + id
-      }).then(getTodos);
+      }).then(getRoast);
     }
   
-    // This function constructs a todo-item row
+    // This function constructs a roast-item row
     // coincides with the html index.html line 15
-    function createNewRow(todo) {
+    function createNewRow(roast) {
       var $newInputRow = $(
         [
-          "<li class='list-group-item todo-item'>",
+          "<li class='list-group-item roast-item'>",
           "<span>",
-          todo.text,
+          roast.userid2,
           "</span>",
           "<input type='text' class='edit' style='display: none;'>",
           "<button class='delete btn btn-default'>x</button>",
@@ -43,7 +50,7 @@ $(document).ready(function() {
         ].join("")
       );
   
-      $newInputRow.find("button.delete").data("id", todo.id);
+      $newInputRow.find("button.delete").data("id", roast.id);
       return $newInputRow;
     }
   
