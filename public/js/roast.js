@@ -3,10 +3,7 @@ $(document).ready(function() {
     var userInfo;
     $.get("/api/sessioninfo", function(data){
        userInfo = data;
-       console.log("data = " + data);
-       console.log("id " + data.id);
-
-
+       console.log("userInfo.id = " + userInfo.id);
 
     // Getting jQuery references to the post body, title, form, and friend select
     var bodyInput = $("#body");
@@ -99,10 +96,10 @@ function renderFriendList(data) {
 // Creates the friend options in the dropdown
 function createFriendRow(friend) {
     var listOption = $("<option>");
-    listOption.attr("value", friend.id);
-    listOption.text(friend.username);
-    return listOption;
-}
+        listOption.attr("value", friend.id);
+        listOption.text(friend.username);
+        return listOption;
+    }
   
 // Update a given post, bring user to the blog page when done
 function updatePost(roast) {
