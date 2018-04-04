@@ -13,7 +13,7 @@
 	width: 250px;
 	position: fixed;
 	top: 0;
-	left: -250px;
+	left: -260px;
 	height: 100vh;
 	z-index: 999;
 	background: #191b1e;
@@ -39,7 +39,7 @@
 	cursor: pointer;
 	transition: ease-out all 0.3s;
 	border-radius: 5px;
-	padding: 3px;
+	padding: 2px;
 	z-index: 1000;
 }
 
@@ -83,7 +83,7 @@
 }
 
 #sidebar ul li.active > a, a[aria-expanded="true"] {
-	background: transparent;
+	background: auto;
 }
 
 a[data-toggle="collapse"] {
