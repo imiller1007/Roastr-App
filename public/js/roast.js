@@ -1,4 +1,13 @@
 $(document).ready(function() {
+
+    var userInfo;
+    $.get("/api/sessioninfo", function(data){
+       userInfo = data;
+       console.log("data = " + data);
+       console.log("id " + data.id);
+
+
+
     // Getting jQuery references to the post body, title, form, and friend select
     var bodyInput = $("#body");
     var cmsForm = $("#cms");
@@ -24,7 +33,7 @@ $(document).ready(function() {
       }
       // Constructing a newRoast object to hand to the database
       var newRoast = {
-        userid1: 2,
+        userid1: data.id,
         roast: bodyInput.val().trim(),
         userid2: friendSelect.val()
         
@@ -106,6 +115,9 @@ function updatePost(roast) {
         window.location.href = "/main";
     });
 }
+
+
+    });
 
 });
   
