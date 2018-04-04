@@ -1,4 +1,12 @@
 $(document).ready(function() {
+
+  var userInfo;
+  $.get("/api/sessioninfo", function(data){
+     userInfo = data;
+     console.log(userInfo)
+    getRoasts(userInfo.id)
+  });
+
  
     // FIXXXX
     // Our new todos will go inside the todoContainer
@@ -7,7 +15,7 @@ $(document).ready(function() {
     $(document).on("click", "button.delete", deleteRoast);
    
      // This function resets the roasts displayed with new roasts from the database
-  function initializeRows() {
+  function initializeRows(roast) {
     $roastContainer.empty();
     var rowsToAdd = [];
     for (var i = 0; i < roast.length; i++) {
@@ -18,10 +26,11 @@ $(document).ready(function() {
   
     // This function grabs roasts from the database and updates the view
     function getRoasts(id) {
-      $.get("/api/select-roast/" + id, function(data) {
+      console.log(id)
+      $.get("/api/inbox-roasts/" + id, function(data) {
           //HOW TO JUST GET THE USERID2
-        roast = data.userid2;
-        initializeRows();
+        roast = data;
+        initializeRows(roast);
       });
     }
   
@@ -31,18 +40,19 @@ $(document).ready(function() {
       var id = $(this).data("id");
       $.ajax({
         method: "DELETE",
-        url: "/api/roast/:id" + id
-      }).then(getRoast);
+        url: "/api/del-roast/" + id
+      }).then( location.reload());
     }
   
     // This function constructs a roast-item row
     // coincides with the html index.html line 15
     function createNewRow(roast) {
+      console.log(roast)
       var $newInputRow = $(
         [
           "<li class='list-group-item roast-item'>",
           "<span>",
-          roast.userid2,
+          "you got a roast from " + roast.userid2,
           "</span>",
           "<input type='text' class='edit' style='display: none;'>",
           "<button class='delete btn btn-default'>x</button>",
