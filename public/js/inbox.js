@@ -2,8 +2,8 @@ $(document).ready(function() {
  
     // FIXXXX
     // Our new todos will go inside the todoContainer
-    var $todoContainer = $(".todo-container");
-    // Adding event listeners for deleting, editing, and adding todos
+    var $roastContainer = $(".roast-container");
+    // Adding event listeners for deleting, editing, and adding roasts
     $(document).on("click", "button.delete", deleteTodo);
     //$(document).on("click", "button.complete", toggleComplete);
     //$(document).on("click", ".todo-item", editTodo);
@@ -11,7 +11,7 @@ $(document).ready(function() {
   
     // This function grabs todos from the database and updates the view
     function getRoasts() {
-      $.get("//api/roast", function(data) {
+      $.get("/api/roast", function(data) {
           //HOW TO JUST GET THE USERID2
         roast = data;
         initializeRows();
@@ -25,12 +25,12 @@ $(document).ready(function() {
       $.ajax({
         method: "DELETE",
         url: "/api/roast/:id" + id
-      }).then(getTodos);
+      }).then(getRoast);
     }
   
     // This function constructs a todo-item row
     // coincides with the html index.html line 15
-    function createNewRow(todo) {
+    function createNewRow(roast) {
       var $newInputRow = $(
         [
           "<li class='list-group-item todo-item'>",
