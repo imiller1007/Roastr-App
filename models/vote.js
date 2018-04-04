@@ -1,3 +1,4 @@
+
 module.exports = function(sequelize, DataTypes) {
 
 var Votes = sequelize.define("vote", {
@@ -22,3 +23,4 @@ var Votes = sequelize.define("vote", {
 
   return Votes;
 };
+
