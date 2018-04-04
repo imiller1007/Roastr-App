@@ -43,7 +43,9 @@ module.exports = function(app) {
         console.log(req.session.user)
         // `results` here would be the newly created user
         res.end();
-      });
+      }).catch(function(error){
+        res.json(error)
+      })
   
     });
 
@@ -76,16 +78,29 @@ module.exports = function(app) {
     })
 
 
+
+
+
+  
 //======================= ROAST ROUTES =========================================
-//=============================================================================
+//==============================================================================
   
 // GET route for getting all of the roasts
 app.get("/api/all-roasts", function(req, res) {
-  db.user.findAll({}).then(function(results) {
+  db.Roast.findAll({}).then(function(results) {
     // results are available to us inside the .then
     res.json(results);
   });
 });
+
+app.get("/api/inbox-roasts/:id", function(req, res){
+  db.Roast.findAll({
+    where: {
+      userid2: req.params.id,
+      response: null
+    }
+  })
+})
 
 
 // Get route for retrieving a single Roast
