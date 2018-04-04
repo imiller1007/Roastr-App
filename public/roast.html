@@ -56,42 +56,57 @@
     </div>
   </nav>
 </div>
-<!--Start feed-->
-<div class="container">
-  <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
-	  <form>
-        <div class="input-group"> <span class="input-group-addon" id="basic-addon1"><div class="btn-group search">
-      <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> </button>
-      <ul class="dropdown-menu">
-        <li><a href="#">This is a user</a></li>
-        <li><a href="#">This is also a user</a></li>
-        <li><a href="#">This was supposed to be a user but something happened</a></li>
-      </ul>
-    </div></span>
-          <input type="text" class="form-control" placeholder="Search users" id="loginName" aria-describedby="basic-addon1">
-        </div>
-        
-      </form>
-    
-  </div>
-  <div class="roast col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">
-    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-      <form>
+<div class="container"> <!-- CONTAINER START -->
+
+    <!-- ========================================================================================================================================= -->
+    <!-- <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12"> <!-- DROPDOWN START -->
+        <!-- <form>
+            <div class="input-group"> 
+                <span class="input-group-addon" id="basic-addon1">
+                    <div class="btn-group search">
+                        <button type="button" class="btn dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> </button>
+                        <ul class="dropdown-menu">
+                            <li><a href="#">This is a user</a></li>
+                            <li><a href="#">This is also a user</a></li>
+                            <li><a href="#">This was supposed to be a user but something happened</a></li>
+                        </ul>
+                    </div>
+                </span>
+                <input type="text" class="form-control" placeholder="Search users" id="loginName" aria-describedby="basic-addon1">
+            </div>
+        </form> -->
+<!--         
         <div class="form-group">
-          <textarea class="form-control roastTextarea" rows="3" placeholder="Roast here."></textarea>
+          <label for="category">Select User:</label>
+          <select class="form-control" id="user2">
+          </select>
         </div>
-      </form>
-    </div>
-	  
-  </div>
-		<button class="btn col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12 submitRoast"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span></button>
+    </div> DROPDOWN END --> -->
+    <!-- ========================================================================================================================================= -->
 
-</div>
-	
-	
+    <!-- ========================================================================================================================================= -->
+    <div class="roast col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 col-sm-12 col-xs-12">  <!-- ROAST MESSAGE START -->
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    			<form id="cms">
+                        <div class="form-group">
+                                <div class="form-group">
+                                        <label for="category">Select User:</label>
+                                        <select class="form-control" id="user2">
+                                      </select>
+                                    </div>
+                                    
+                            <label for="body">Body:</label>
+                            <textarea placeholder="Post Body" class="form-control" rows="10" id="body"></textarea>
+                          
+                            <br />
+                            <button type="submit" class="btn btn-success submit">Submit</button>
+                        </div>
+                    </form>
+        </div>
+    </div> <!-- ROAST MESSAGE END -->
+    <!-- ========================================================================================================================================= -->
 
-	
-	
+    </div> <!-- CONTAINER END -->
 
 <!--particles -->
 <div id="particles-js"></div>
@@ -121,5 +136,6 @@
             });
         </script> 
 <script type="text/javascript" src="js/particles.js"></script>
+<script type="text/javascript" src="js/roast.js"></script>
 </body>
 </html>

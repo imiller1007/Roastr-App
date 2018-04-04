@@ -15,10 +15,8 @@ module.exports = function(app) {
     
   });
 
-
   app.get("/main", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/main.html"))
-
     console.log("==================================")
     console.log(req.session.user)
     console.log("==================================")
@@ -33,7 +31,7 @@ module.exports = function(app) {
   });
 
   app.get("/reply", function(req, res){
-    res.sendFile(path.join(__dirname, "../public/reply"))
+    res.sendFile(path.join(__dirname, "../public/reply.html"))
   })
   
 };
