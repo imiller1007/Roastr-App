@@ -11,14 +11,14 @@ module.exports = function(app) {
 
 // GET route for getting all of the roasts ====================================================//
 app.get("/api/roasts", function(req, res) {
-    db.Roast.findAll({}).then(function(results) {
+    db.roast.findAll().then(function(results) {
         res.json(results);
     });
 });
 
 // Get route for retrieving a single Roast ====================================================//
 app.get("/api/roasts/:id", function(req, res) {
-    db.Roast.findOne({
+    db.roast.findOne({
         where: {
             id: req.params.id
         }
@@ -30,14 +30,14 @@ app.get("/api/roasts/:id", function(req, res) {
 
 // Post route for creating a single Roast ====================================================//
 app.post("/api/roasts", function(req, res){
-    db.Roast.create(req.body).then(function(data){
+    db.roast.create(req.body).then(function(data){
         res.json(data);
     })
 });
 
 // Delete route for deleting a single roast ====================================================//
 app.delete("/api/roasts/:id", function(req, res) {
-    db.Roast.destroy({
+    db.roast.destroy({
         where: {
             id: req.params.id
         }
@@ -48,7 +48,7 @@ app.delete("/api/roasts/:id", function(req, res) {
 
 // Put route for updating a single roast ====================================================//
 app.put("/api/roasts/:id", function(req, res) {
-    db.Post.update(
+    db.roast.update(
         req.body,
     {
     where: {
