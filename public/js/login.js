@@ -10,8 +10,30 @@ $("#signupButton").on("click", function(){
     imgURL: $("#signupPic").val().trim()
     }
 
-    $.post("/api/new-user", newUser)
+    // if(len(username) < 5 || len(username) > 30){
+    //     alert("Your username may be too long or too short. It must be 5-30 characters.")
+    // }
+    // else if(len(password) < 8 || len(password) > 16){
+    //     alert("Your password may be too long or too short. It must be 8-16 characters.")
+    // }
+    // else if(imgURL === ""){
+    //     alert("Please input an image address.")
+    // }
+    
+    
+    $.post("/api/new-user", newUser).then(function(response){
+        console.log(response);
+        if (response.errors){
+            
+            alert(response.errors[0].message);
+        }
+        else {
+            console.log("nad");
+           window.location.href = '/main'; 
+        }
+    })
 
+    
 });
 
     
