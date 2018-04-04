@@ -7,11 +7,13 @@ form {
 	margin-bottom:0;
 }
 
-
-
 .btn-group {
 	width: 100%;
 	box-shadow: none;
+}
+
+.dropdown {
+	margin: 0 0 30px;
 }
 
 .dropdown-menu {
@@ -31,8 +33,6 @@ ul.a:hover{
 	padding: 15px;
 	font-size: 24px;
 }
-
-
 
 .roastTextarea {
 	border-radius: 6px;
@@ -56,4 +56,8 @@ a:hover {
 
 .input-group {
 	border-radius: 5px;
+}
+
+#rules{
+	float: right;
 }
