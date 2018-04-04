@@ -2,9 +2,10 @@ $(document).ready(function() {
  
     // FIXXXX
     // Our new todos will go inside the todoContainer
-    var $todoContainer = $(".todo-container");
-    // Adding event listeners for deleting, editing, and adding todos
-    $(document).on("click", "button.delete", deleteRoast);
+    var $roastContainer = $(".roast-container");
+    // Adding event listeners for deleting, editing, and adding roasts
+    $(document).on("click", "button.delete", deleteTodo);
+
     //$(document).on("click", "button.complete", toggleComplete);
     //$(document).on("click", ".todo-item", editTodo);
     

@@ -18,10 +18,22 @@ module.exports = function(app) {
 
   app.get("/main", function(req, res) {
     res.sendFile(path.join(__dirname, "../public/main.html"))
-    console.log(req.cookies)
-    console.log("=====================")
-    console.log(req.session)
+
+    console.log("==================================")
+    console.log(req.session.user)
+    console.log("==================================")
   });
 
+  app.get("/roast", function(req, res){
+    res.sendFile(path.join(__dirname, "../public/roast.html"))
+  });
+
+  app.get("/inbox", function(req, res){
+    res.sendFile(path.join(__dirname, "../public/inbox.html"))
+  });
+
+  app.get("/reply", function(req, res){
+    res.sendFile(path.join(__dirname, "../public/reply"))
+  })
   
 };

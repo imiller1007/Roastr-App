@@ -5,12 +5,14 @@
 // Dependencies
 // =============================================================
 var db = require("../models/index.js");
-
-// Routes
 // =============================================================
+
+
 module.exports = function(app) {
 
 
+//======================= USER ROUTES =========================================
+//=============================================================================
 
     // Get all users
     app.get("/api/all-users", function(req, res) {
@@ -46,7 +48,7 @@ module.exports = function(app) {
     });
 
     // Find one user
-    app.get("/api/:users?", function(req, res) {
+    app.get("/api/users/:users?", function(req, res) {
      
       if (req.params.users) {
         
@@ -55,6 +57,8 @@ module.exports = function(app) {
             username: req.params.users
           }
         }).then(function(result) {
+          req.session.user = result.dataValues
+          
           return res.json(result);
         });
       }
@@ -63,17 +67,51 @@ module.exports = function(app) {
       }
 
     });
+
+    //Grab session data for front-end
+    app.get("/api/sessioninfo", function(req, res){
+      var userInfo = req.session.user
+
+      res.json(userInfo)
+    })
+
+
+//======================= ROAST ROUTES =========================================
+//=============================================================================
   
-  
+// GET route for getting all of the roasts
+app.get("/api/all-roasts", function(req, res) {
+  db.user.findAll({}).then(function(results) {
+    // results are available to us inside the .then
+    res.json(results);
+  });
+});
+
+
+// Get route for retrieving a single Roast
+app.get("/api/select-roast/:id", function(req, res) {
+  db.Roast.findOne({
+    where: {
+      id: req.params.id
+    }
+  }).then(function(data) {
+    console.log(data);
+    res.json(data);
+  });
+});
+
+
+// DELETE route for deleting roast
+app.delete("/api/del-roast/:id", function(req, res) {
+  db.Roast.destroy({
+    where: {
+      id: req.params.id
+    }
+  }).then(function(data) {
+    res.json(data);
+  });
+});
 
 
 
-
-
-
-
-
-
-
-
-  };
+};
