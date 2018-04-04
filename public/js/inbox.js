@@ -35,6 +35,11 @@ $(document).ready(function() {
       }).then(getRoasts);
     }
   
+////////// CREATE A LINK TO GET TO THE RESPONSE PAGE
+
+
+
+
     // This function constructs a roast-item row
     // coincides with the html index.html line 15
     function createNewRow(roast) {
