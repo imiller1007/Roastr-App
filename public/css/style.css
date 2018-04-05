@@ -245,7 +245,7 @@ table a:hover {
 
 .img-table img{
 	height: 28px;
-	width: 28px;
+	width: auto;
 }
 
 
