@@ -230,9 +230,25 @@ label:active {
 }
 
 .img-table {
-	height: 60px;
-	width: 60px;
+	height: 28px;
+	width: 28px;
+	overflow: hidden;
+	border-radius: 50%;
 }
+
+
+table a:hover {
+	background: transparent;
+	color: gold;
+	text-shadow: 0 0 10px orange;
+}
+
+.img-table img{
+	height: 28px;
+	width: 28px;
+}
+
+
 #userImageDiv {
 	width: 210px;
 	height: 210px;
@@ -251,3 +267,5 @@ label:active {
 	background: #f44d2f;
 	border: none;
 }
+
+
