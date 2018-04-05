@@ -32,8 +32,8 @@ $.get("/api/sessioninfo", function(data){
 
              $("#inboxSubmit").on("click", function(){
                  var roast = {
-                     userid1: userInfo.id,
-                     userid2: results[i].userid1,
+                     userid2: userInfo.id,
+                     userid1: results[i].userid1,
                      roaster: results[i].roaster,
                      responder: userInfo.username,
                      roast: $("#roastHere").val()
