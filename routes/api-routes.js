@@ -148,6 +148,17 @@ app.delete("/api/del-roast/:id", function(req, res) {
   });
 });
 
-
+  // PUT route for updating posts
+  app.put("/api/inbox-roasts/:id", function(req, res) {
+    db.roast.update(
+      req.body,
+      {
+        where: {
+          id: req.params.id
+        }
+      }).then(function(data) {
+      res.json(data);
+    });
+  });
 
 };

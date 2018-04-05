@@ -1,103 +1,49 @@
 var userInfo;
 
-
 $.get("/api/sessioninfo", function(data){
-   userInfo = data;
-   
+    userInfo = data;
+    $("#userImageDiv").html("<img src= '" + userInfo.imgURL + "' class='img-responsive img-circle' alt='Responsive image'>");
+    $("#sideName").html("<h1>" + userInfo.username + "</h1>");
+    $("#score").html("Score: " + userInfo.score);
+    console.log("userInfo.id = " + userInfo.id);
 
-$("#userImageDiv").html("<img src= '" + userInfo.imgURL + "' class='img-responsive img-circle' alt='Responsive image'>")
-$("#sideName").html("<h1>" + userInfo.username + "</h1>")
-$("#score").html("Score: " + userInfo.score)
+    $.get("/api/inbox-roasts/" + userInfo.id, function(results){
+        console.log(results);
+        $("#roastCount").html(results.length);
 
-$.get("/api/inbox-roasts/" + userInfo.id, function(data){
-  
+        for (var i = 0; i < results.length; i++) {
+            
+            $("#inboxTable").append("<tr value='" + i + "'><th scope='row'><span class='glyphicon glyphicon-fire' aria-hidden='true'></span></th><td>From</td><td><div class='img-table'><img id='small' alt='nothing'></div></td><td>"
+            +results[i].roaster
+            +"</td><td><div class='btn-group'><button class='btn-default btn dropdown-toggle ' type='button' data-toggle='dropdown' aria-haspopup='true' aria-expanded='false'>Respond <span class='caret'></span></button><ul class='dropdown-menu'><form><div class='form-group'><textarea id='roastHere' class='form-control roastTextarea' rows='4' placeholder='Roast here.'></textarea></div></form></ul></div></td><td><a id='inboxSubmit'>Submit</a></td><td><a id='inboxIgnore'>Ignore</a></td></tr>");
+            
+            $.get("/api/all-users", function(res){
+                for (var j = 0; j < res.length; j++){
+                    $("#small").attr('src', "'" +res[j].imgURL + "'");
+                }
+            });
 
-})
+             $("#inboxIgnore").on("click", function(){
+                 $.ajax({
+                 method: "DELETE",
+                 url: "/api/del-roast/" + results[i].id
+                 })
+             });
 
+             $("#inboxSubmit").on("click", function(){
+                 var roast = {
+                     userid2: userInfo.id,
+                     userid1: results[i].userid1,
+                     roaster: results[i].roaster,
+                     responder: userInfo.username,
+                     roast: $("#roastHere").val()
+                 }
+
+                 $.put("/api/inbox-roasts/" + results[i].id, roast).then(function(response){
+                     alert("Roast'd!").then(location.href = "/main");
+                 })       
+             });
+
+        }
+    });
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-// $(document).ready(function() {
- 
-//     // FIXXXX
-//     // Our new todos will go inside the todoContainer
-//     var $roastContainer = $(".roast-container");
-//     // Adding event listeners for deleting, editing, and adding roasts
-//     $(document).on("click", "button.delete", deleteRoast);
-   
-//      // This function resets the roasts displayed with new roasts from the database
-//   function initializeRows() {
-//     $roastContainer.empty();
-//     var rowsToAdd = [];
-//     for (var i = 0; i < roast.length; i++) {
-//       rowsToAdd.push(createNewRow(roast[i]));
-//     }
-//     $roastContainer.prepend(rowsToAdd);
-//   }
-  
-//     // This function grabs roasts from the database and updates the view
-//     function getRoasts(id) {
-//       $.get("/api/select-roast/" + id, function(data) {
-//           //HOW TO JUST GET THE USERID2
-//         roast = data.userid2;
-//         initializeRows();
-//       });
-//     }
-  
-//     // This function deletes a todo when the user clicks the delete button
-//     function deleteRoast(event) {
-//       event.stopPropagation();
-//       var id = $(this).data("id");
-//       $.ajax({
-//         method: "DELETE",
-//         url: "/api/roast/:id" + id
-//       }).then(getRoast);
-//     }
-  
-//     // This function constructs a roast-item row
-//     // coincides with the html index.html line 15
-//     function createNewRow(roast) {
-//       var $newInputRow = $(
-//         [
-//           "<li class='list-group-item roast-item'>",
-//           "<span>",
-//           roast.userid2,
-//           "</span>",
-//           "<input type='text' class='edit' style='display: none;'>",
-//           "<button class='delete btn btn-default'>x</button>",
-//           "</li>"
-//         ].join("")
-//       );
-  
-//       $newInputRow.find("button.delete").data("id", roast.id);
-//       return $newInputRow;
-//     }
-  
-  
-//   });
-  
