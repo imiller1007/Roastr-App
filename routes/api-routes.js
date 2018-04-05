@@ -161,4 +161,52 @@ app.delete("/api/del-roast/:id", function(req, res) {
     });
   });
 
+
+
+//======================= COMPLETE ROUTES =========================================
+//==============================================================================
+  
+app.get("/api/all-complete", function(req, res) {
+  db.complete.findAll({}).then(function(results) {
+    res.json(results);
+  });
+
+});
+
+// Add a user
+app.post("/api/new-complete", function(req, res) {
+
+  console.log("User Data:");
+  console.log(req.body);
+
+  db.complete.create({
+    roastid: req.body.id,
+    userid1: req.body.userid1,
+    userid2: req.body.userid2,
+    roaster: req.body.roaster,
+    responder: req.body.responder,
+    roast: req.body.roast
+  }).then(function(results) {
+    req.session.user = results.dataValues
+    console.log(req.session.user)
+    // `results` here would be the newly created user
+    res.end();
+  }).catch(function(error){
+    res.json(error)
+  })
+
+});
+
+
+
+
+
+
+
+    
+
+
+
+
+
 };
