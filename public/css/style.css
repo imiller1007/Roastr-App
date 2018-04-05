@@ -234,3 +234,9 @@ label:active {
 	height: 60px;
 	width: 60px;
 }
+#userImageDiv {
+	width: 210px;
+	height: 210px;
+	border-radius: 50%;
+	overflow: hidden;
+}
