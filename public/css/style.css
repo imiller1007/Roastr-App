@@ -239,3 +239,15 @@ label:active {
 	border-radius: 50%;
 	overflow: hidden;
 }
+
+.panel-default {
+	border: solid 2px gold;
+	box-shadow: 0 0 10px orange;
+    background: #2d3035;
+	color: #f44d2f;
+}
+
+.panel-default>.panel-heading {
+	background: #f44d2f;
+	border: none;
+}
