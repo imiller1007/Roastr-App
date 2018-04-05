@@ -8,10 +8,6 @@ $("#userImageDiv").html("<img src= '" + userInfo.imgURL + "' class='img-responsi
 $("#sideName").html("<h1>" + userInfo.username + "</h1>")
 $("#score").html("Score: " + userInfo.score)
 
-.get("/api/inbox-roasts/" + userInfo.id, function(data){
-    console.log(data)
-})
-
 });
 
 $

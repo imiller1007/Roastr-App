@@ -47,7 +47,7 @@ $("#roastButton").on("click", function(){
     $.post("/api/new-roast", roast).then(function(response){
 
     })
-        
+        window.location.href = "/main"
     
     });
 
