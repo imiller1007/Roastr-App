@@ -16,7 +16,7 @@ $("#score").html("score: " + userInfo.score)
 var selectedUser;
 
 $.get("api/all-users", function(data){
-    console.log(data)
+    
     for(var i = 0; i < data.length; i++){
         $("#roasters").append("<li> <a href=# data-value=" + data[i].username + ">" + data[i].username + "</a> </li>")
     }
@@ -32,16 +32,22 @@ $(document).on("click", "#roasters li a", function(event){
 
 
 $("#roastButton").on("click", function(){
+    var roast = {
+        userid1: userInfo.id,
+        userid2: 0,
+        roast: $("#roastBody").val()
+    }
     
-})
+    $.get("/api/users/" + selectedUser, function(data){
+        roast.userid2 = data.id
 
+    $.post("/api/new-roast", roast).then(function(response){
 
+    })
+        
+    
+    });
 
+    
+});
 
-
-
-
-
-$("#roastButton").on("click", function(){
-
-})

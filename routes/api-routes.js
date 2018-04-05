@@ -61,7 +61,7 @@ module.exports = function(app) {
         }).then(function(result) {
           req.session.user = result.dataValues
           
-          return res.json(result);
+          return res.json(result.dataValues);
         });
       }
       else {
@@ -103,12 +103,22 @@ app.get("/api/all-roasts", function(req, res) {
   });
 });
 
+// app.get("api/full-roasts", function(req, res){
+//   db.roast.findAll({
+//     where:{
+//       response: 
+//     }
+//   })
+// })
+
 app.get("/api/inbox-roasts/:id", function(req, res){
   db.roast.findAll({
     where: {
       userid2: req.params.id,
       response: null
     }
+  }).then(function(data){
+    res.json(data)
   })
 })
 

@@ -41,7 +41,12 @@ module.exports = function(app) {
   });
 
   app.get("/inbox", function(req, res){
+    if(!req.session.user){
+      res.redirect("/")
+    }
+    else{
     res.sendFile(path.join(__dirname, "../public/inbox.html"))
+    }
   });
 
   app.get("/reply", function(req, res){
