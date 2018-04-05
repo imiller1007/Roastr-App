@@ -36,12 +36,12 @@
 
   <!--profile img-->
   <div class="row" id="profile-img">
-    <div class="col-xs-1 col-sm-1 col-md-1 col-lg-2"></div>
-    <div class="col-xs-10 col-sm-10 col-md-10 col-lg-8" id="userImageDiv">
-      <img src="https://vignette.wikia.nocookie.net/animaljam/images/5/5c/Chuck_Norris.jpg/revision/latest?cb=20140730185108"
-        class="img-responsive img-circle" alt="Responsive image">
+      <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>
+      <div class="col-xs-10 col-sm-10 col-md-10 col-lg-8" id="userImageDiv">
+        <img src="https://vignette.wikia.nocookie.net/animaljam/images/5/5c/Chuck_Norris.jpg/revision/latest?cb=20140730185108"
+          class="img-responsive img-circle" alt="Responsive image">
+      </div>
     </div>
-  </div>
 
   <!-- username -->
   <div id="sideName">
@@ -129,27 +129,23 @@
         
           <!-- Table -->
           <table class="table">
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>From</th>
-                <th>Username</th>
-                <th>Respond</th>
-                <th>Avatar</th>
-              </tr>
-            </thead>
             
             <!-- start table entries -->
             <tbody>
 
               <!-- each table row could look like this -->
               <tr>
-                <th scope="row">1</th>
+                <th scope="row"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span></th>
                 <td>From</td>
+                <td>
+                  <div class="img-table">
+                    <img src="https://fthmb.tqn.com/YM3tIIM-8_Dr7KAecI7feOBzlCw=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/spongebob_wide-56a00f0a5f9b58eba4aeb6f2.jpg" alt="nothing">
+                  </div>
+                </td>
                 <td>Ian</td>
                 <td>
                   <div class="btn-group">
-                    <button class="btn-success btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <button class="btn-default btn dropdown-toggle " type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                       Respond <span class="caret"></span>
                     </button>
                     <ul class="dropdown-menu">
@@ -161,19 +157,23 @@
                     </ul>
                   </div>
                 </td>
-                <td>
-                    <img src="https://fthmb.tqn.com/YM3tIIM-8_Dr7KAecI7feOBzlCw=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/spongebob_wide-56a00f0a5f9b58eba4aeb6f2.jpg" alt="nothing" class="img-table img-circle">
-                </td>
+                <td><a id="inboxSubmit">Submit</a></td>
+                <td><a id="inboxIgnore">Ignore</a></td>
               </tr>
               
               <!-- each table row could look like this -->
               <tr>
-                  <th scope="row">2</th>
+                  <th scope="row"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span></th>
                   <td>From</td>
-                  <td>Anthony</td>
+                  <td>
+                    <div class="img-table">
+                      <img src="https://fthmb.tqn.com/YM3tIIM-8_Dr7KAecI7feOBzlCw=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/spongebob_wide-56a00f0a5f9b58eba4aeb6f2.jpg" alt="nothing">
+                    </div>
+                  </td>
+                  <td>Ian</td>
                   <td>
                     <div class="btn-group">
-                      <button class="btn-success btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                      <button class="btn-default btn dropdown-toggle " type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                         Respond <span class="caret"></span>
                       </button>
                       <ul class="dropdown-menu">
@@ -185,34 +185,37 @@
                       </ul>
                     </div>
                   </td>
-                  <td>
-                    <img src="http://nick.mtvnimages.com/nick/video/images/nick/spongebob-050-full-episode-16x9.jpg?quality=0.60" alt="..." class="img-table img-circle">
-                  </td>
+                  <td><a id="inboxSubmit">Submit</a></td>
+                  <td><a id="inboxIgnore">Ignore</a></td>
                 </tr>
 
                               <!-- each table row could look like this -->
-              <tr>
-                  <th scope="row">3</th>
-                  <td>From</td>
-                  <td>Asad</td>
-                  <td>
-                    <div class="btn-group">
-                      <button class="btn-success btn-xs dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Respond <span class="caret"></span>
-                      </button>
-                      <ul class="dropdown-menu">
-                        <form>
-                          <div class="form-group">
-                            <textarea class="form-control roastTextarea" rows="4" placeholder="Roast here."></textarea>
-                          </div>
-                        </form>
-                      </ul>
-                    </div>
-                  </td>
-                  <td>
-                      <img src="https://fthmb.tqn.com/YM3tIIM-8_Dr7KAecI7feOBzlCw=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/spongebob_wide-56a00f0a5f9b58eba4aeb6f2.jpg" alt="..." class="img-table img-circle">
-                  </td>
-                </tr>
+                              <tr>
+                                  <th scope="row"><span class="glyphicon glyphicon-fire" aria-hidden="true"></span></th>
+                                  <td>From</td>
+                                  <td>
+                                    <div class="img-table">
+                                      <img src="https://fthmb.tqn.com/YM3tIIM-8_Dr7KAecI7feOBzlCw=/768x0/filters:no_upscale():max_bytes(150000):strip_icc()/spongebob_wide-56a00f0a5f9b58eba4aeb6f2.jpg" alt="nothing">
+                                    </div>
+                                  </td>
+                                  <td>Ian</td>
+                                  <td>
+                                    <div class="btn-group">
+                                      <button class="btn-default btn dropdown-toggle " type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        Respond <span class="caret"></span>
+                                      </button>
+                                      <ul class="dropdown-menu">
+                                        <form>
+                                          <div class="form-group">
+                                            <textarea class="form-control roastTextarea" rows="4" placeholder="Roast here."></textarea>
+                                          </div>
+                                        </form>
+                                      </ul>
+                                    </div>
+                                  </td>
+                                  <td><a id="inboxSubmit">Submit</a></td>
+                                  <td><a id="inboxIgnore">Ignore</a></td>
+                                </tr>
               
             </tbody>
           </table>
