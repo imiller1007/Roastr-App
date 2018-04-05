@@ -7,7 +7,7 @@ $.get("/api/sessioninfo", function(data){
 
 $("#userImageDiv").html("<img src= '" + userInfo.imgURL + "' class='img-responsive img-circle' alt='Responsive image'>")
 $("#sideName").html("<h1>" + userInfo.username + "</h1>")
-$("#score").html("score: " + userInfo.score)
+$("#score").html("Score: " + userInfo.score)
 
 
 });
@@ -35,11 +35,14 @@ $("#roastButton").on("click", function(){
     var roast = {
         userid1: userInfo.id,
         userid2: 0,
+        roaster: userInfo.username,
+        responder: "",
         roast: $("#roastBody").val()
     }
     
     $.get("/api/users/" + selectedUser, function(data){
         roast.userid2 = data.id
+        roast.responder = data.username
 
     $.post("/api/new-roast", roast).then(function(response){
 

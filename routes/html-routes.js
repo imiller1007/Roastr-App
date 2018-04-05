@@ -24,11 +24,6 @@ module.exports = function(app) {
     res.sendFile(path.join(__dirname, "../public/main.html"))
     }
     
-    
-
-    console.log("==================================")
-    console.log(req.session.user)
-    console.log("==================================")
   });
 
   app.get("/roast", function(req, res){

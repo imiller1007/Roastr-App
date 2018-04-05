@@ -15,6 +15,16 @@ var Roast = sequelize.define("roast", {
       allowNull: false
 
     },
+
+    roaster:{
+      type: DataTypes.STRING,
+      allowNull: false
+    },
+
+    responder:{
+      type: DataTypes.STRING,
+      allowNull: false
+    },
     
     roast: {
       type: DataTypes.STRING,

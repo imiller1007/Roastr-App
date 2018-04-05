@@ -7,7 +7,7 @@ $.get("/api/sessioninfo", function(data){
 
 $("#userImageDiv").html("<img src= '" + userInfo.imgURL + "' class='img-responsive img-circle' alt='Responsive image'>")
 $("#sideName").html("<h1>" + userInfo.username + "</h1>")
-$("#score").html("score: " + userInfo.score)
+$("#score").html("Score: " + userInfo.score)
 
 $.get("/api/inbox-roasts/" + userInfo.id, function(data){
   

@@ -90,6 +90,8 @@ app.post("/api/new-roast", function(req, res){
   db.roast.create({
     userid1: req.body.userid1,
     userid2: req.body.userid2,
+    roaster: req.body.roaster,
+    responder: req.body.responder,
     roast: req.body.roast,
   })
 })
@@ -97,19 +99,18 @@ app.post("/api/new-roast", function(req, res){
 
 // GET route for getting all of the roasts
 app.get("/api/all-roasts", function(req, res) {
-  db.roast.findAll({}).then(function(results) {
+  db.roast.findAll({
+    where:{
+      response:{
+        $ne: null
+      }
+    }
+  }).then(function(results) {
     // results are available to us inside the .then
     res.json(results);
   });
 });
 
-// app.get("api/full-roasts", function(req, res){
-//   db.roast.findAll({
-//     where:{
-//       response: 
-//     }
-//   })
-// })
 
 app.get("/api/inbox-roasts/:id", function(req, res){
   db.roast.findAll({
